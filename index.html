@@ -22,18 +22,16 @@
         header img {
             width: 80px; /* Adjust size as needed */
             height: auto;
-            margin-right: 20px; /* Spacing between logo and text */
+            margin-right: px; /* Spacing between logo and text */
             float: left; /* To position the logo to the left */
         }
 
         .header-content {
-            display: flex;
-            flex-direction: column;
             align-items: center;
         }
 
         h1 {
-            font-size: 2em; /* Reduced font size */
+            font-size: 22px; /* Reduced font size */
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -43,7 +41,7 @@
         }
 
         h2 {
-            font-size: 1.5em; /* Adjusted font size */
+            font-size: 20px; /* Adjusted font size */
             margin-top: 0px;
             font-style: italic;
             color: #ffe57f;
@@ -51,7 +49,7 @@
         }
 
         h3 {
-            font-size: 1.2em;
+            font-size: 15px;
             margin-top: 0;
             color:black;
             font-weight: 300;
@@ -68,10 +66,9 @@
 
         .header-buttons a {
             margin-left: 10px;
-            padding: 8px 12px; /* Adjusted padding */
-            color: white;
+             /* Adjusted padding */
+            color:black;
             text-decoration: none;
-            border-radius: 5px;
             transition: background 0.3s ease;
         }
 
@@ -81,37 +78,10 @@
 
         section {
             display: flex;
-            padding: 20px;
-            margin: 20px;
             background: #f5f6f7;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .blank-section {
-            flex: 1;
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: background-color 0.3s ease;
-        }
-
-        .blank-part {
-            flex: 1;
-            background-color: white;
-            margin: 0px;
-            border-radius: 7px;
-            padding-top:0;
-            height: 100%;
-            color: red;
-            transition: background-color 0.3s ease;
-            border: 1px solid #007BFF;  /* Add border to define the box */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */    
-        }
-        .blank-part:hover {
-            background-color: burlywood;  /* Change background on hover */
-        }
-
         .services {
             flex: 2;
             display: flex;
@@ -122,10 +92,9 @@
         .service {
             background: white;
             color: black;
-            margin: 15px;
-            padding: 10px;
+            margin: 10px;
             border-radius: 5px;
-            flex: 0 0 calc(45% - 20px);
+            flex: 1 1 ;
             min-width: 200px;
             text-align: center;
             transition: background 0.3s ease;
@@ -170,11 +139,11 @@
 }
 .news-ticker {
     background-color: #f1f1f1; /* Light gray background */
-    padding: 50px;
-    font-size: 30px;
-    color: #333; /* Dark text color */
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
     overflow: hidden;
-    width: auto
+    width:100%
 }
 
     </style>
@@ -197,18 +166,27 @@
             <a href="https://wa.me/917737740207" target="_blank">WhatsApp Help</a>
         </div>
     </header>
+    <section1 id="latest-news">
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+               <a href=""><p>New E-Mitra service for caste certificates available now!</p></a>
+            </marquee>
+        </div>
+    </section1>
+    
+    <script>
+    const newsItems = [
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+     const newsList = document.getElementById('news-list');
+    newsItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.text} (Updated on: ${item.date})`;
+        newsList.appendChild(li);
+    });
+</script>
+
 
     <section>
-        <div class="blank-section">
-            <div class="blank-part">
-                <p class="p">letast updates</p>
-                <p style="line-height:0;" >This is the first part of the blank section.</p>
-            </div>
-            <div class="blank-part">
-                <p class="p">Part 2</p>
-                <p>This is the second part of the blank section.</p>
-            </div>
-        </div>
         <div class="services">
             <h2 style="width: 100%;background-color:#007bbf;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
             <div class="service">
@@ -270,32 +248,6 @@
     </section>
    <section> 
     </section>
-    <section id="latest-news">
-        <h3>Latest News</h3>
-        <div class="news-ticker">
-            <marquee behavior="scroll" direction="left" scrollamount="5">
-                <p>New E-Mitra service for caste certificates available now!</p>
-                <p>Apply for your birth certificate with ease!</p>
-                <p>Government job updates available every week!</p>
-            </marquee>
-        </div>
-    </section>
-    
-    <script>
-    const newsItems = [
-        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },
-        { text: "Apply for your birth certificate with ease!", date: "9th October 2024" },
-        { text: "Government job updates available every week!", date: "8th October 2024" },
-    ];
-
-    const newsList = document.getElementById('news-list');
-    newsItems.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.text} (Updated on: ${item.date})`;
-        newsList.appendChild(li);
-    });
-</script>
-
     <footer>
         <img src="BACK .jpg"alt="back" style="width: 50px;height: 50px;" onclick="goBack()" class="back-btn">
         <script>
