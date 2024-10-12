@@ -18,14 +18,6 @@
             padding: 10px 20px; /* Reduced padding for smaller header */
         }
 
-        /* Styling the logo to be on the left corner */
-        header img {
-            width: 80px; /* Adjust size as needed */
-            height: auto;
-            margin-right: px; /* Spacing between logo and text */
-            float: left; /* To position the logo to the left */
-        }
-
         .header-content {
             align-items: center;
         }
@@ -60,7 +52,7 @@
 
         .header-buttons {
             display: flex;
-            justify-content: left; /* Centers the buttons */
+            justify-content: center; /* Centers the buttons */
             margin-bottom: 10px; /* Adds space below buttons */
         }
 
@@ -150,10 +142,7 @@
 </head>
 <body>
     <header>
-        <img src="RJ LOGO.png" alt="RJ Services Logo" style=";"> <!-- Logo on the left -->
-        <!-- Buttons above the heading -->
-        <!-- Header content -->
-        <div class="header-content">
+          <div class="header-content">
             <h1>RJ SERVICES</h1>
             <h2>Welcome to Jain Accounting & Bookkeeping Consultancy</h2>
             <h3>Your One-Stop Solution for All Financial Needs</h3>
@@ -255,7 +244,13 @@
                 window.history.back();
             }
             </script>
-        <script>
+         
+        <p>&copy; 2024 RJ Services. All rights reserved.</p>
+        <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+<script>
 // Register the service worker to enable caching and offline support
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -267,10 +262,3 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
-
-         
-        <p>&copy; 2024 RJ Services. All rights reserved.</p>
-        <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
-    </footer>
-</body>
-</html>
