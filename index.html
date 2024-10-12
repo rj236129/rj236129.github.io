@@ -50,24 +50,40 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
 
-        .header-buttons {
-            display:flex;
-            justify-content: ; /* Centers the buttons */
-            margin-bottom: 0; /* Adds space below buttons */
-            font-size: 11px;
-        }
+      .header-buttons {
+    display: flex;
+    flex-direction: column; /* Change to column for mobile view */
+    align-items: center; /* Center align the buttons */
+    margin-bottom: 0; /* No margin below buttons */
+    font-size: 11px;
+}
 
-        .header-buttons a {
-      
-             /* Adjusted padding */
-            color:black;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
+.header-buttons a {
+    padding: 5px 10px; /* Added padding for better click area */
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    width: 100%; /* Make links take full width */
+    text-align: center; /* Center the text */
+}
 
-        .header-buttons a:hover {
-            background-color: burlywood;
-        }
+.header-buttons a:hover {
+    background-color: burlywood;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 600px) {
+    .header-buttons {
+        flex-direction: row; /* Row layout for larger screens */
+        justify-content: center; /* Center the buttons in row */
+    }
+
+    .header-buttons a {
+        width: auto; /* Auto width for larger screens */
+        margin: 0 5px; /* Add margin between buttons */
+    }
+}
+
 
         section {
             display: flex;
