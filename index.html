@@ -53,7 +53,7 @@
      /* Default styling for desktop and larger screens */
 .header-buttons {
     display: flex;
-    justify-content: center; /* Centers the buttons */
+    flex-direction: column; /* Centers the buttons */
     margin-bottom: 0;
     font-size: 14px; /* Default font size for desktop */
     background-color: black;
@@ -62,7 +62,9 @@
 
 /* Buttons */
 .header-buttons a {
+    margin-bottom: 10px;
     margin-left: 5px;
+    padding:10px 15px;
     color: white;
     text-decoration: none;
     transition: background 0.3s ease;
@@ -76,6 +78,7 @@
 @media (max-width: 900px) { /* Targets screens under 900px (mobile devices) */
     .header-buttons {
         display: flex;
+        
         flex-direction: column; /* Stack buttons vertically */
         justify-content: center;
         align-items: center;
