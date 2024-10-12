@@ -50,24 +50,49 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
 
-      .header-buttons {
-            display:flex;
-            justify-content: ; /* Centers the buttons */
-            margin-bottom: 0; /* Adds space below buttons */
-            font-size: 10px;
-        }
+     /* Default styling for desktop and larger screens */
+.header-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons */
+    margin-bottom: 0;
+    font-size: 14px; /* Default font size for desktop */
+}
 
-        .header-buttons a {
-            margin-left: 2px;
-             /* Adjusted padding */
-            color:black;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
+/* Buttons */
+.header-buttons a {
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
 
-        .header-buttons a:hover {
-            background-color: burlywood;
-        }
+.header-buttons a:hover {
+    background-color: burlywood;
+}
+
+/* Styling for mobile devices with 16:9 ratio */
+@media (max-width: 900px) { /* Targets screens under 900px (mobile devices) */
+    .header-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        justify-content: center;
+        align-items: center;
+        font-size: 12px; /* Smaller font for mobile */
+    }
+
+    .header-buttons a {
+        margin-bottom: 5px; /* Adds space between links */
+        margin-left: 0; /* Resets margin */
+    }
+}
+
+/* Target even smaller screens (smaller phones) */
+@media (max-width: 480px) { /* For very small phones */
+    .header-buttons {
+        font-size: 10px; /* Further reduce font size */
+    }
+}
+
         section {
             display: flex;
             background: #f5f6f7;
