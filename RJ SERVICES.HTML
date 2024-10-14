@@ -160,6 +160,30 @@
 .back-btn:hover {
     background-color: burlywood;
 }
+.vertical-table {
+            width: 300px;
+            margin:20px ;
+            border: 2px solid black;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .vertical-table div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .vertical-table div span {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .vertical-table div span:last-child {
+            font-weight: normal;
+            border-bottom: none;
+        }
 
     </style>
 </head>
@@ -178,15 +202,15 @@
     </header>
     <section id="RJSERVICES">
         <div style="display: flex;">
-            <div class="buttonList">
-                <p class="rj">ONLY FOR BIJOLIYA BLOCK</p>
-                <a href="https://janapp.rajasthan.gov.in/janaadhaar/citizenDashboard">JAN-AADHAR</a>
-                <a href="ration-card.html">RATION-CARD</a>
-                <a href="nfsa.html">NFSA (राशन पाने के लिये)</a>
-                <a href="cast cetificate.html">CAST CERTIFICATE (जाति प्रमाण पत्र)</a>
-                <a href="bonafide certificate.html">BONAFIDE CERTIFICATE(मूल-निवास प्रमाण पात्र)</a>
-                <a href="birth certificate.html">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</a>
-                <a href="death certificate.html">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</a>
+            <div class="vertical-table">
+                <div><p class="rj">ONLY FOR BIJOLIYA BLOCK</p></div>
+                <div class="buttonList"><a href="https://janapp.rajasthan.gov.in/janaadhaar/citizenDashboard">JAN-AADHAR</a></div>
+                <div class="buttonList"><a href="ration-card.html">RATION-CARD</a></div>
+                <div class="buttonList"><a href="nfsa.html">NFSA (राशन पाने के लिये)</a></div>
+                <div class="buttonList"><a href="cast cetificate.html">CAST CERTIFICATE (जाति प्रमाण पत्र)</a></div>
+                <div class="buttonList"><a href="bonafide certificate.html">BONAFIDE CERTIFICATE(मूल-निवास प्रमाण पात्र)</a></div>
+                <div class="buttonList"><a href="birth certificate.html">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</a></div>
+                <div class="buttonList"><a href="death certificate.html">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</a></div>
             </div>
 
             <div class="formLinks">
