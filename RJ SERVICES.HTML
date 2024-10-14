@@ -26,6 +26,26 @@
             padding: 20px 10px;
             font-size: 30px;
         }
+
+        .quick-links {
+            margin-top: 10px;
+        }
+
+        .quick-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
         section {
             padding: 20px;
             margin: 20px;
@@ -37,17 +57,17 @@
         .buttonList {
             display: flex;
             flex-direction: column;
-            margin-right: 40px; /* Spacing for vertical alignment */
+            margin-right: 20px;
         }
 
         .buttonList a {
-           text-decoration: none;
-            background-color: #e0f7fa;
-            color: black;
+            text-decoration: none;
+            background-color: skyblue;
+            color: white;
             text-align: left;
-            font-weight: bold; /* Make the text bold */
-            font-size: 12px; /* Increase font size */
-            margin-bottom: 10px; /* Spacing between links */
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
 
         .buttonList a:hover {
@@ -61,16 +81,12 @@
 
         .formLinks a {
             text-decoration: none;
-            background-color: #e0f7fa;
-            color: black;
+            color: white;
             text-align: left;
-            font-weight: bold; /* Make the text bold */
-            font-size: 12px; /* Increase font size */
-            margin-bottom: 10px; /* Spacing between links */
-        }
-
-        .formLinks a:hover {
-            background: #218838;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 10px;
+            border: black;
         }
 
         .whatsapp-button {
@@ -93,37 +109,15 @@
             margin-right: 10px;
         }
 
-        .rj {
-            font-weight: bold;          /* Make the text bold */
-            font-size: 20px;           /* Change the font size */
-            color: #333;               /* Change text color */
-            text-align: center;        /* Center the text */
-            margin: 20px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
-            padding: 10px;             /* Add padding around the text */
-            border-radius: 5px;        /* Optional: Add rounded corners */
-        }
-
-        .form {
-            font-weight: bold;          /* Make the text bold */
-            font-size: 20px;           /* Change the font size */
-            color: #333;               /* Change text color */
-            text-align: center;        /* Center the text */
-            margin: 20px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
-            padding: 10px;             /* Add padding around the text */
-            border-radius: 5px;        /* Optional: Add rounded corners */
-        }
-
-        .help {
-            font-weight: bold;          /* Make the text bold */
-            font-size: 20px;           /* Change the font size */
-            color: #333;               /* Change text color */
-            text-align: center;        /* Center the text */
-            margin: 20px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
-            padding: 10px;             /* Add padding around the text */
-            border-radius: 5px;        /* Optional: Add rounded corners */
+        .rj, .form, .help {
+            font-weight: bold;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .other-services {
@@ -131,19 +125,20 @@
             flex-direction: column;
             margin-top: 20px;
         }
-        .back-btn {
-    background-color: burlywood;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom:0px;
-}
 
-.back-btn:hover {
-    background-color: burlywood;
-}
+        .back-btn {
+            background-color: burlywood;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 0px;
+        }
+
+        .back-btn:hover {
+            background-color: burlywood;
+        }
 
     </style>
 </head>
@@ -154,39 +149,129 @@
             function goBack() {
                 window.history.back();
             }
-            </script>
+        </script>
         <h1>RJ SERVICES</h1> 
         <h2>JOIN US SAVE YOUR TIME</h2>
         <h3>WELCOME JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h3>
         <h4>E-MITRA SERVICES</h4>
     </header>
+    
     <section id="RJSERVICES">
         <div style="display: flex;">
             <div class="buttonList">
-                <p class="rj">ONLY FOR BIJOLIYA BLOCK</p>
-                <a href="#jan-aadhar">JAN-AADHAR</a>
-                <a href="ration-card.html">RATION-CARD</a>
-                <a href="nfsa.html">NFSA (राशन पाने के लिये)</a>
-                <a href="cast cetificate.html">CAST CERTIFICATE (जाति प्रमाण पत्र)</a>
-                <a href="bonafide certificate.html">BONAFIDE CERTIFICATE(मूल-निवास प्रमाण पात्र)</a>
-                <a href="birth certificate.html">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</a>
-                <a href="death certificate.html">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</a>
+                <p class="rj" style="font-size: 14px; margin: 10px 0;">ONLY FOR BIJOLIYA BLOCK</p>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">JAN-AADHAR</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="#jan-aadhar" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">RATION-CARD</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="RATION-CARD.HTML" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">NFSA (राशन पाने के लिये)</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="nfsa.html" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">CAST CERTIFICATE (जाति प्रमाण पत्र)</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="cast cetificate.html" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">BONAFIDE CERTIFICATE (मूल-निवास प्रमाण पात्र)</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="bonafide certificate.html" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="birth certificate.html" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</p>
+                </b>
+                <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                    <a href="death certificate.html" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                </button>
             </div>
-          <div class="formLinks">
+
+            <div class="formLinks">
                 <h3 class="form">All E-Mitra Application Forms:</h3>
-                <a href="https://drive.google.com/file/d/1aGUGRbbcTQrpwkl7CPj0MiEXYid2iz4J/view?usp=drive_link" target="_blank">JAN-AADHAR CARD APPLICATION FORM</a>
-                <a href="https://drive.google.com/file/d/1VAR4-25aEipsp0WdF2lShEsqN2cRoae2/view?usp=drive_link" target="_blank">NEW RATION-CARD APPLICATION FORM FOR APL</a>
-                <a href="https://drive.google.com/file/d/1t1X1eayB8X1yu9gP6ymzJrMwD9TVaCHc/view?usp=drive_link" target="_blank">NEW RATION-CARD APPLICATION FORM FOR BPL</a>
-                <a href="https://drive.google.com/file/d/179j8NoBr7AUq7EOs1n35z06Gt3acLwtK/view?usp=drive_link" target="_blank">RATION CARD CORRECTION APPLICATION FORM</a>
-                <a href="https://drive.google.com/file/d/1hSjoQgcea3xON42AFEhAJPJ5_407Fa30/view?usp=drive_link" target="_blank">NFSA APPLICATION FORM FOR RULAR</a>
-                <a href="https://drive.google.com/file/d/1qfSD_xFSTnnp-4ON1sYOOfb8bPy3on3C/view?usp=drive_link" target="_blank">NFSA APPLICATION FORM FOR URBAN</a>
-                <a href="https://drive.google.com/file/d/1nVQeW9f2D8hnGXiNcxRRYuF4H5R2cL6R/view?usp=drive_link" target="_blank">CAST CERTIFICATE APPLICATION FORM</a>
-                <a href="https://drive.google.com/file/d/1-_SkVfpxv6Y3iZghrsZ8PPFlx7e5Q9c1/view?usp=drive_link" target="_blank">BONAFIDE CERTIFICATE APPLICATION FORM</a>
-                <a href="https://drive.google.com/file/d/1f-Z9hMzNYC9e_NhK5r2bWMMzITK5GAbf/view?usp=drive_link" target="_blank">BIRTH CERTIFICATE APPLICATION FORM</a>
-                <a href="https://drive.google.com/file/d/1d9u1Be8CDKohufE1hi6eMYEcTz6GwoRq/view?usp=drive_link" target="_blank">DEATH CERTIFICATE APPLICATION FORM</a>
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">JAN-AADHAR CARD APPLICATION FORM</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1aGUGRbbcTQrpwkl7CPj0MiEXYid2iz4J/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+                
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">NEW RATION-CARD APPLICATION FORM FOR APL</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1Tg67fXac58Vz3S89mrIhJlG6kbEdM4Ms/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">NEW RATION-CARD APPLICATION FORM FOR BPL</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1w7eObrP1mQuMR6yzlqrgmLKn9UptWquO/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">APPLICATION FORM FOR CAST CERTIFICATE</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1e-0P0rF0wDbjUqSjK9Y0O3hWweB-z2r3/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">APPLICATION FORM FOR BONAFIDE CERTIFICATE</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1T4PQU0sR4mW0bHQ29gdv4KTR2ZwHf0ER/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">APPLICATION FORM FOR BIRTH CERTIFICATE</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/14Khdc9_NtyMjBdWw7tFTGg5F-_8G34ra/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
+
+                <b>
+                    <p style="background-color:#007BFF;font-size:15px;color: #e0f7fa; margin: 5px 0;">APPLICATION FORM FOR DEATH CERTIFICATE</p>
+                    <button style="background-color:skyblue; margin: 0; padding: 5px 10px;">
+                        <a href="https://drive.google.com/file/d/1tyuw3jTDuH5XG9Uro4Gf0D-FyDZtU0bl/view?usp=drive_link" target="_blank" style="text-decoration: none; color: black;">CLICK HERE</a>
+                    </button>
+                </b>
             </div>
-            
         </div>
+        
+        <div class="quick-links">
+            <h2>Quick Links:</h2>
+            <a href="https://drive.google.com/drive/folders/1wLC8WQbJKqUIgo1O3lLv8S7dOl29mUKs" target="_blank">E-Mitra Services</a>
+            <a href="https://www.youtube.com/watch?v=MjhnSTyG77Q&list=PLM1LNt3_2U8DgbAs48CNJ5Fw2c2aZx78K" target="_blank">YouTube Tutorials</a>
+            <a href="https://www.governmentjobs.com/" target="_blank">Government Jobs</a>
+        </div>
+
+
         <h3 class="help">Need Help?</h3>
         <div class="whatsapp-button">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
