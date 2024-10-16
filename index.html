@@ -1,4 +1,13 @@
-body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJ Services - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+    <style>
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -237,3 +246,127 @@ width: 100%;
         font-size: 14px;
     }
 }
+</style>
+<body>
+    <header>
+        <img src="RJ LOGO.png" alt="RJ Services Logo" style=";"> <!-- Logo on the left -->
+        <!-- Buttons above the heading -->
+        <!-- Header content -->
+        <div class="header-content">
+            <h1>RJ SERVICES</h1>
+            <h2>Welcome to Jain Accounting & Bookkeeping Consultancy</h2>
+            <h3>Your One-Stop Solution for All Financial Needs</h3>
+        </div>
+        <div class="header-buttons"><strong>
+            <a href="index.html">Home</a>
+            <a href="privecy policy.html">Privacy Policy</a>
+            <a href="terms&conditions.html">Terms and Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="https://wa.me/917737740207" target="_blank">WhatsApp Help</a>
+        </div>
+    </header>
+        <section1 id="latest-news">
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                <p>New E-Mitra service for caste certificates available now!</p>
+            </marquee>
+        </div>
+    </section1>
+    
+    <script>
+    const newsItems = [
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+     const newsList = document.getElementById('news-list');
+    newsItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.text} (Updated on: ${item.date})`;
+        newsList.appendChild(li);
+    });
+</script>
+
+
+    <section>
+        <div class="blank-section">
+            <div class="blank-part">
+                <p class="p">letast updates</p>
+                <p style="line-height:0;" >This is the first part of the blank section.</p>
+            </div>
+            <div class="blank-part">
+                <p class="p">Part 2</p>
+                <p>This is the second part of the blank section.</p>
+            </div>
+        </div>
+        <div class="services">
+            <h2 style="width: 100%;background-color:#007bbf;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
+            <div class="service">
+                <h3>ITR Services</h3>
+                <p>Expert assistance for income tax returns for individuals and businesses.</p>
+                <a href="itr.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>GST Services</h3>
+                <p>Complete guidance for GST registration and compliance.</p>
+                <a href="gst.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Accounting Services</h3>
+                <p>Comprehensive accounting solutions tailored to your business.</p>
+                <a href="accounting.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Government Jobs</h3>
+                <p>Support for job applications, results tracking, and admit cards.</p>
+                <a href="jobs.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>PAN Card Services</h3>
+                <p>Assistance with new PAN applications and updates.</p>
+                <a href="pan_services.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>E-Mitra Services</h3>
+                <p>Access to various government services through E-Mitra.</p>
+                <a href="RJ SERVICES.HTML">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Financial Consulting</h3>
+                <p>Expert advice for your financial planning and strategy.</p>
+                <a href="financial_consulting.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Tax Planning</h3>
+                <p>Strategic tax planning to minimize liabilities and maximize returns.</p>
+                <a href="tax_planning.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Business Registration</h3>
+                <p>Guidance through the business registration process.</p>
+                <a href="business_registration.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Bookkeeping</h3>
+                <p>Professional bookkeeping services for accurate financial records.</p>
+                <a href="bookkeeping.html">Learn More</a>
+            </div>
+            <div class="service">
+                <h3>Other Services</h3>
+                <p>Additional services offered by our consultancy.</p>
+                <a href="other_services.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+   <section> 
+    </section>
+    <footer>
+        <img src="BACK .jpg"alt="back" style="width: 50px;height: 50px;" onclick="goBack()" class="back-btn">
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+            </script>
+         
+        <p>&copy; 2024 RJ Services. All rights reserved.</p>
+        <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
+    </footer>
+</body>
+</html>
