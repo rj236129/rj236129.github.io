@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+    .buttonList, .formLinks {
+        flex-direction: column; /* Stack items vertically for smaller screens */
+    }
+
+    .vertical-table {
+        width: 100%; /* Make the table take the full width on smaller screens */
+    }
+
+    .whatsapp-button {
+        justify-content: center; /* Center the WhatsApp button */
+    }
+
+    section {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+.vertical-table {
+    width: 100%; /* Full width on all screen sizes */
+    max-width: 150px; /* Limit max width on large screens */
+    margin: 20px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.buttonList, .formLinks {
+    flex: 1; /* Allow flexible width */
+}
+
+form {
+    width: 100%; /* Adjust forms to full width */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 1000px; /* Limit the section width */
+    width: 100%; /* Make sure it takes the full width on smaller screens */
+}
+
+.whatsapp-button {
+    width: 100%; /* Full width on smaller screens */
+    justify-content: center; /* Center the button */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
