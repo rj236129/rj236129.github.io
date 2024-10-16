@@ -4,76 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Services - Home</title>
-    <link rel="stylesheet" href="index.css">
-</head>
     <style>
-   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header {
-    background: #007BFF;
-    color: white;
-    /* Reduced padding for smaller header */
-}
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 5px 10px; /* Reduced padding for smaller header */
+        }
 
-/* Styling the logo to be on the left corner */
-header img {
-    width: 5%; /* Adjust size as needed */
-    height: auto;
-    margin-right: 20px; /* Spacing between logo and text */
-    float: left; /* To position the logo to the left */
-}
+        .header-content {
+            align-items: center;
+        }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        h1 {
+            font-size: 22px; /* Reduced font size */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
 
-h1 {
-    font-size: 2rem; /* Reduced font size */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-}
+        h2 {
+            font-size: 20px; /* Adjusted font size */
+            margin-top: 0px;
+            font-style: italic;
+            color: #ffe57f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
 
-h2 {
-    font-size: 1.5em; /* Adjusted font size */
-    margin-top: 0px;
-    font-style: italic;
-    color: #ffe57f;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
+        h3 {
+            font-size: 15px;
+            margin-top: 0;
+            color:black;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
 
-h3 {
-    font-size: 1.2em;
-    margin-top: 0;
-    color:black;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
+     /* Default styling for desktop and larger screens */
 .header-buttons {
     display: flex;
-    justify-content: left; /* Centers the buttons */
-    margin-bottom: 10px; /* Adds space below buttons */
+    flex-direction: column; /* Centers the buttons */
+    margin-bottom: 0;
+    font-size: 14px; /* Default font size for desktop */
+    border-radius: 4px;
+    text-emphasis-color: black;
 }
 
+/* Buttons */
 .header-buttons a {
     margin-bottom: 10px;
-    padding: 4px 5px; /* Adjusted padding */
+    padding:4px 5px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
@@ -81,199 +73,113 @@ h3 {
     background-color: burlywood;
 }
 
-section {
-    display: flex;
-    padding: 20px;
-    margin: 20px;
-    background: #f5f6f7;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.blank-section {
-    flex: 1;
-    margin-right: 5%; /* Adjusts margin for smaller screens */
-    display: flex;
-    flex-direction: column;
-    transition: background-color 0.3s ease;
-}
-
-.blank-part {
-    flex: 1;
-    background-color: white;
-    margin: 5px; /* Margin for spacing */
-    border-radius: 7px;
-    padding: 0;
-    height: auto; /* Allow the height to adjust based on content */
-    color: red;
-    transition: background-color 0.3s ease;
-    border: 1px solid #007BFF;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-}
-@media (max-width: 768px) {
-    .blank-section {
-        margin-right: 0; /* Remove margin on smaller screens */
+/* Styling for mobile devices with 16:9 ratio */
+@media (max-width: 900px) { /* Targets screens under 900px (mobile devices) */
+    .header-buttons {
+        display: flex;
+        
+        flex-direction: column; /* Stack buttons vertically */
+        justify-content: center;
+        align-items: center;
+        font-size: 12px; /* Smaller font for mobile */
     }
 
-    .blank-part {
-        flex: 1 1 100%; /* Full width on smaller screens */
+    .header-buttons a {
+        margin-bottom: 5px; /* Adds space between links */
+        margin-left: 0; /* Resets margin */
     }
 }
-.blank-section {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap */
+
+/* Target even smaller screens (smaller phones) */
+@media (max-width: 480px) { /* For very small phones */
+    .header-buttons {
+        font-size: 10px; /* Further reduce font size */
+    }
 }
 
-.blank-part {
-    flex: 1 1 calc(45% - 10px); /* Two items per row, accounting for margin */
-}
-.blank-part {
-    height: auto; /* Automatically adjust based on content */
-}
-.blank-part:hover {
-    background-color: burlywood;  /* Change background on hover */
-}
-.service {
-    background: white;
-    color: black;
-    margin: 10px; /* Reduced margin for mobile */
-    padding: 10px;
+        section {
+            display: flex;
+            background: #f5f6f7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .services {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            background: white;
+            color: black;
+            margin: 10px;
+            border-radius: 5px;
+            flex: 1 1 ;
+            min-width: 200px;
+            text-align: center;
+            transition: background 0.3s ease;
+            border: 1px solid burlywood;  /* Add border to make it a box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+        }
+
+        .service:hover {
+            background: burlywood;
+        }
+
+        footer {
+            text-align: center;
+            background: #007bbf;
+            color: rgb(2, 2, 2);
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        } 
+        .back-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    flex: 0 0 calc(50% - 20px); /* Adjusted for two columns on larger screens */
-    min-width: 200px;
-    text-align: center;
-    transition: background 0.3s ease;
-    border: 1px solid burlywood;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-}
-@media (max-width: 768px) {
-    .service {
-        flex: 1 1 100%; /* Full width on small screens */
-        min-width: 100%; /* Ensure it takes full width */
-    }
-}
-.services {
-    display: flex;
-    flex-wrap: wrap; /* Allow services to wrap */
-    justify-content: space-between; /* Distribute space between items */
-}
-
-
-.service:hover {
-    background: burlywood;
-}
-
-footer {
-    text-align: center;
-    background: #007bbf;
-    color: rgb(2, 2, 2);
-    padding: 10px 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
-}
-.p{width: auto;
-    height:auto;
-    background-color:#007bbf;
-    font-size:20px;
-    margin-top: auto;
-    padding-inline: 3px;
-}
-.back-btn {
-background-color: #007BFF;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-margin-bottom: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .back-btn:hover {
-background-color: burlywood;
+    background-color: burlywood;
 }
 .news-ticker {
-background-color: #f1f1f1; /* Light gray background */
-font-size: 20px;
-padding: 0px;
-color: #333; /* Dark text color */
-overflow: hidden;
-width: 100%;
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
 }
 
-/* MEDIA QUERIES for Responsiveness */
-
-@media (max-width: 768px) {
-    h1, h2, h3 {
-        text-align: center;
-    }
-
-    header img {
-        width: 60px; /* Adjust logo size for smaller screens */
-        margin: 0 auto;
-        float: none; /* Removes the float so it doesn't affect layout */
-    }
-
-    .header-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services {
-        flex-direction: column; /* Services stack vertically on smaller screens */
-    }
-
-    .service {
-        flex: 1 0 100%; /* Each service takes up full width */
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-buttons a {
-        margin: 5px 0;
-        padding: 6px 10px;
-    }
-
-    .services {
-        padding: 10px;
-        margin: 0;
-    }
-
-    .service {
-        margin: 5px 0;
-    }
-
-    footer {
-        font-size: 14px;
-    }
-}
-
-</style>
+    </style>
+</head>
 <body>
     <header>
-        <img src="RJ LOGO.png" alt="RJ Services Logo" style=";"> <!-- Logo on the left -->
-        <!-- Buttons above the heading -->
-        <!-- Header content -->
-        <div class="header-content">
+          <div class="header-content">
             <h1>RJ SERVICES</h1>
             <h2>Welcome to Jain Accounting & Bookkeeping Consultancy</h2>
             <h3>Your One-Stop Solution for All Financial Needs</h3>
         </div>
         <div class="header-buttons"><strong>
-            <a href="index.html">Home</a>
-            <a href="privecy policy.html">Privacy Policy</a>
-            <a href="terms&conditions.html">Terms and Conditions</a>
-            <a href="about.html">About Us</a>
-            <a href="https://wa.me/917737740207" target="_blank">WhatsApp Help</a>
+            <a href="index.html" style="color: whitesmoke;background-color: black;">Home</a>
+            <a href="privecy policy.html" style="color: whitesmoke;background-color:black;">Privacy Policy</a>
+            <a href="terms&conditions.html"style="color: whitesmoke;background-color:black;">Terms and Conditions</a>
+            <a href="about.html"style="color: whitesmoke;background-color:black;">About Us</a>
         </div>
     </header>
-        <section1 id="latest-news">
+    <section1 id="latest-news">
         <div class="news-ticker">
             <marquee behavior="scroll" direction="left" scrollamount="5">
-                <p>New E-Mitra service for caste certificates available now!</p>
+               <a href=""><p>New E-Mitra service for caste certificates available now!</p></a>
             </marquee>
         </div>
     </section1>
@@ -291,85 +197,57 @@ width: 100%;
 
 
     <section>
-        <div class="blank-section">
-            <div class="blank-part">
-                <p class="p">letast updates</p>
-                <p style="line-height:0;" >This is the first part of the blank section.</p>
-            </div>
-            <div class="blank-part">
-                <p class="p">Part 2</p>
-                <p>This is the second part of the blank section.</p>
-            </div>
-        </div>
         <div class="services">
             <h2 style="width: 100%;background-color:#007bbf;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
             <div class="service">
                 <h3>ITR Services</h3>
                 <p>Expert assistance for income tax returns for individuals and businesses.</p>
-                <a href="itr.html">Learn More</a>
+                <a href="itr.html">CLICK HERE</a>
             </div>
             <div class="service">
                 <h3>GST Services</h3>
                 <p>Complete guidance for GST registration and compliance.</p>
-                <a href="gst.html">Learn More</a>
+                <a href="gst.html">CLICK HERE</a>
             </div>
             <div class="service">
                 <h3>Accounting Services</h3>
                 <p>Comprehensive accounting solutions tailored to your business.</p>
-                <a href="accounting.html">Learn More</a>
+                <a href="accounting.html">CLICK HERE</a>
             </div>
             <div class="service">
                 <h3>Government Jobs</h3>
                 <p>Support for job applications, results tracking, and admit cards.</p>
-                <a href="jobs.html">Learn More</a>
+                <a href="jobs.html">CLICK HERE</a>
             </div>
             <div class="service">
                 <h3>PAN Card Services</h3>
                 <p>Assistance with new PAN applications and updates.</p>
-                <a href="pan_services.html">Learn More</a>
+                <a href="pan_services.html">CLICK HERE</a>
             </div>
             <div class="service">
                 <h3>E-Mitra Services</h3>
                 <p>Access to various government services through E-Mitra.</p>
-                <a href="RJ SERVICES.HTML">Learn More</a>
+                <a href="RJ SERVICES.HTML">CLICK HERE</a>
             </div>
             <div class="service">
-                <h3>Financial Consulting</h3>
-                <p>Expert advice for your financial planning and strategy.</p>
-                <a href="financial_consulting.html">Learn More</a>
-            </div>
-            <div class="service">
-                <h3>Tax Planning</h3>
-                <p>Strategic tax planning to minimize liabilities and maximize returns.</p>
-                <a href="tax_planning.html">Learn More</a>
-            </div>
-            <div class="service">
-                <h3>Business Registration</h3>
-                <p>Guidance through the business registration process.</p>
-                <a href="business_registration.html">Learn More</a>
-            </div>
-            <div class="service">
-                <h3>Bookkeeping</h3>
-                <p>Professional bookkeeping services for accurate financial records.</p>
-                <a href="bookkeeping.html">Learn More</a>
-            </div>
-            <div class="service">
-                <h3>Other Services</h3>
-                <p>Additional services offered by our consultancy.</p>
-                <a href="other_services.html">Learn More</a>
+            <h3>Other Services</h3>
+            <p>Additional services offered by our consultancy.</p>
+            <a href="other_services.html">CLICK HERE</a>
             </div>
         </div>
     </section>
    <section> 
     </section>
     <footer>
+        <a href="https://wa.me/917737740207" style="background-color: green;font-size: 20px;color: white;" target="_blank">Chat with us on WhatsApp for help
+        </a>
+        <div>
         <img src="BACK .jpg"alt="back" style="width: 50px;height: 50px;" onclick="goBack()" class="back-btn">
         <script>
             function goBack() {
                 window.history.back();
             }
-            </script>
-         
+            </script></div>
         <p>&copy; 2024 RJ Services. All rights reserved.</p>
         <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
     </footer>
