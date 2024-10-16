@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
     <style>
-    body {
+   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -133,27 +133,31 @@ section {
 .blank-part:hover {
     background-color: burlywood;  /* Change background on hover */
 }
-
-.services {
-    flex: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .service {
     background: white;
     color: black;
-    margin: 15px;
+    margin: 10px; /* Reduced margin for mobile */
     padding: 10px;
     border-radius: 5px;
-    flex: 0 0 calc(45% - 20px);
+    flex: 0 0 calc(50% - 20px); /* Adjusted for two columns on larger screens */
     min-width: 200px;
     text-align: center;
     transition: background 0.3s ease;
-    border: 1px solid burlywood;  /* Add border to make it a box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+    border: 1px solid burlywood;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
 }
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 100%; /* Full width on small screens */
+        min-width: 100%; /* Ensure it takes full width */
+    }
+}
+.services {
+    display: flex;
+    flex-wrap: wrap; /* Allow services to wrap */
+    justify-content: space-between; /* Distribute space between items */
+}
+
 
 .service:hover {
     background: burlywood;
@@ -246,6 +250,7 @@ width: 100%;
         font-size: 14px;
     }
 }
+
 </style>
 <body>
     <header>
