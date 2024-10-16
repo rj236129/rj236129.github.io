@@ -4,160 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Services - Home</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    /* Adjust for different screen sizes */
-    min-width: 320px;
-    max-width: 100%;
-}
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header {
-    background: #007BFF;
-    color: white;
-    padding: 5px 10px;
-    text-align: center; /* Centers text on smaller screens */
-}
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 5px 10px; /* Reduced padding for smaller header */
+        }
 
-h1, h2, h3 {
-    margin: 0;
-    padding: 5px;
-}
+        .header-content {
+            align-items: center;
+        }
 
-h1 {
-    font-size: 5vw; /* Adjust font size based on viewport width */
-}
+        h1 {
+            font-size: 22px; /* Reduced font size */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
 
-h2 {
-    font-size: 3.5vw;
-}
+        h2 {
+            font-size: 20px; /* Adjusted font size */
+            margin-top: 0px;
+            font-style: italic;
+            color: #ffe57f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
 
-h3 {
-    font-size: 2.5vw;
-}
+        h3 {
+            font-size: 15px;
+            margin-top: 0;
+            color:black;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
 
-/* Ensure the buttons stack and adjust based on screen size */
+     /* Default styling for desktop and larger screens */
 .header-buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
-    font-size: 1.2em;
+    flex-direction: column; /* Centers the buttons */
+    margin-bottom: 0;
+    font-size: 14px; /* Default font size for desktop */
+    border-radius: 4px;
+    text-emphasis-color: black;
 }
 
+/* Buttons */
 .header-buttons a {
-    margin: 5px;
-    padding: 10px 15px;
-    background-color: black;
-    color: whitesmoke;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    padding:4px 5px;
+    color: white;
     text-decoration: none;
-    text-align: center;
-    flex: 1 0 auto; /* Allows the buttons to auto-scale */
-    max-width: 200px;
+    transition: background 0.3s ease;
 }
 
 .header-buttons a:hover {
     background-color: burlywood;
 }
 
-section {
-    display: flex;
-    flex-direction: column; /* Stack on smaller screens */
-    padding: 20px;
-    margin: 10px;
-    background-color: #f5f6f7;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Styling for mobile devices with 16:9 ratio */
+@media (max-width: 900px) { /* Targets screens under 900px (mobile devices) */
+    .header-buttons {
+        display: flex;
+        
+        flex-direction: column; /* Stack buttons vertically */
+        justify-content: center;
+        align-items: center;
+        font-size: 12px; /* Smaller font for mobile */
+    }
+
+    .header-buttons a {
+        margin-bottom: 5px; /* Adds space between links */
+        margin-left: 0; /* Resets margin */
+    }
 }
 
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Target even smaller screens (smaller phones) */
+@media (max-width: 480px) { /* For very small phones */
+    .header-buttons {
+        font-size: 10px; /* Further reduce font size */
+    }
 }
 
-.service {
-    background: white;
-    margin: 10px;
-    border-radius: 5px;
-    text-align: center;
-    padding: 15px;
-    flex: 1 0 200px; /* Each service box takes up at least 200px */
-    transition: background 0.3s ease;
-    border: 1px solid burlywood;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        section {
+            display: flex;
+            background: #f5f6f7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .services {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
-.service:hover {
-    background-color: burlywood;
-}
+        .service {
+            background: white;
+            color: black;
+            margin: 10px;
+            border-radius: 5px;
+            flex: 1 1 ;
+            min-width: 200px;
+            text-align: center;
+            transition: background 0.3s ease;
+            border: 1px solid burlywood;  /* Add border to make it a box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+        }
 
-footer {
-    background: #007bbf;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
+        .service:hover {
+            background: burlywood;
+        }
 
-.back-btn {
+        footer {
+            text-align: center;
+            background: #007bbf;
+            color: rgb(2, 2, 2);
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        } 
+        .back-btn {
     background-color: #007BFF;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .back-btn:hover {
     background-color: burlywood;
 }
-
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-    .header-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service {
-        flex: 1 0 100%;
-        max-width: 90%;
-    }
-
-    h1, h2, h3 {
-        font-size: 4vw; /* Adjusts font size for mobile */
-    }
+.news-ticker {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
 }
-
-@media (max-width: 480px) {
-    .header-buttons a {
-        font-size: 0.9em;
-        padding: 8px 12px;
-    }
-
-    h1 {
-        font-size: 6vw;
-    }
-    
-    h2 {
-        font-size: 5vw;
-    }
-
-    h3 {
-        font-size: 4vw;
-    }
-
-
-    </style>
+</style>
 </head>
 <body>
     <header>
