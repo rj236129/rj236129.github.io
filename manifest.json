@@ -1,70 +1,73 @@
 {
   "name": "RJ Services",
   "short_name": "RJ Services",
-  "description": "A comprehensive accounting and bookkeeping consultancy service.",
-  "start_url": "/index.html",
+  "description": "Your trusted accounting and bookkeeping consultancy offering various services including ITR, GST, and PAN card assistance.",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#007bff",
-  "orientation": "portrait-primary",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "/icons/icon-96x96.png",
+      "src": "img/icon-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-128x128.png",
+      "src": "img/icon-128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-256x256.png",
+      "src": "img/icon-256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "img/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "widgets": [
-    {
-      "name": "Accounting Services",
-      "src": "/widgets/accounting-services-widget.html",
-      "description": "Quick access to accounting services."
-    },
-    {
-      "name": "GST Services",
-      "src": "/widgets/gst-services-widget.html",
-      "description": "Quick access to GST services."
-    }
-  ],
-  "categories": [
-    "finance",
-    "business",
-    "consulting"
-  ],
-  "lang": "en",
-  "dir": "ltr",
-  "iarc_rating_id": "e",
-  "prefer_related_applications": false,
-  "related_applications": [],
+  "categories": ["business", "productivity"],
+  "lang": "en-US",
+  "iarc_rating_id": "YOUR_IARC_RATING_ID", // Replace with a valid IARC Rating ID
   "launch_handler": {
-    "client_mode": "relaxed"
-  },
-  "file_handlers": [
-    {
-      "action": "/open-file",
-      "extensions": [".pdf", ".docx"]
+    "client_mode": "multiple",
+    "web": {
+      "url": "https://rj236129.github.io/"
     }
-  ],
+  },
+  "file_handlers": {
+    "application/pdf": {
+      "action": "/handle-file",
+      "name": "PDF Document"
+    }
+  },
   "protocol_handlers": [
     {
-      "protocol": "web+example",
-      "url": "/?url=%s"
+      "protocol": "web+services",
+      "url": "https://rj236129.github.io/?url=%s"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "display_override": ["window-controls-overlay"],
+  "edge_side_panel": true,
+  "background_sync": {
+    "min_interval": 60
+  },
+  "screenshots": [
+    {
+      "src": "img/screenshot-1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    },
+    {
+      "src": "img/screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
     }
   ]
 }
