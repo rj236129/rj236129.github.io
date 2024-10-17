@@ -39,10 +39,18 @@
       "url": "https://rj236129.github.io/"
     }
   },
-  "file_handlers": {
+ "file_handlers": {
     "application/pdf": {
       "action": "/handle-file",
       "name": "PDF Document"
+    },
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
+      "action": "/handle-file",
+      "name": "Word Document"
+    },
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+      "action": "/handle-file",
+      "name": "Excel Spreadsheet"
     }
   },
   "protocol_handlers": [
