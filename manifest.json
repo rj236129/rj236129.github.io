@@ -13,6 +13,14 @@
   "lang": "en-US",
   "iarc_rating_id": "12345-12345-12345-12345",
   "prefer_related_applications": false,
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "fullscreen"
+  ],
+  "window_controls_overlay": {
+    "enabled": true
+  },
   "related_applications": [
     {
       "platform": "play",
