@@ -1,7 +1,7 @@
 {
-  "name": "Jain Accounting & Bookkeeping Consultancy",
-  "short_name": "JAB Consultancy",
-  "description": "Expert services in accounting, bookkeeping, and government job applications.",
+  "name": "RJ Services",
+  "short_name": "RJ Services",
+  "description": "Expert accounting and bookkeeping consultancy services, including PAN card assistance and government job applications.",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
