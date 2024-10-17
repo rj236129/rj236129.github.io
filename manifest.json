@@ -69,5 +69,8 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "iarc_rating_id": "your-iarc-rating-id",  // If applicable
+  "lang": "en",
+  "prefer_related_applications": false
 }
