@@ -51,6 +51,16 @@
       "url": "https://rj236129.github.io/?url=%s"
     }
   ],
+   "scope_extensions": [
+    {
+      "origin": "https://example.com",
+      "url_pattern": "/path/*"
+    },
+    {
+      "origin": "https://another-example.com",
+      "url_pattern": "/resources/*"
+    }
+  ],
   "prefer_related_applications": false,
   "related_applications": [],
   "display_override": ["window-controls-overlay"],
