@@ -1,18 +1,55 @@
 {
-  "name": "RJ SERVICES",
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "short_name": "RJ SERVICES",
-  "id": "RJ SERVICES",
-  "description": "accoutning and book keeping consultancy, emitra , etc. other services",
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "fullscreen"
+  "name": "RJ Services",
+  "short_name": "RJ Services",
+  "description": "Your one-stop solution for accounting and bookkeeping services.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ],
-  "iarc_rating_id": "12345",
-  "prefer_related_applications": true,
-  "edge_side_panel": {
-    "preferred_width": 500
-  }
+  "serviceworker": {
+    "src": "service-worker.js",
+    "scope": "/"
+  },
+  "file_handlers": {
+    "application/pdf": {
+      "action": "/view-pdf.html",
+      "icons": [
+        {
+          "src": "img/pdf-icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+myapp",
+      "url": "/?url=%s"
+    }
+  ],
+  "categories": ["business", "finance", "consulting"],
+  "iarc_rating_id": "E",
+  "lang": "en-US",
+  "dir": "ltr",
+  "widgets": [
+    {
+      "src": "img/widget-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
