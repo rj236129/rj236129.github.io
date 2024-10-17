@@ -178,6 +178,19 @@
             <a href="about.html"style="color: whitesmoke;background-color:black;">About Us</a>
         </div>
     </header>
+     <script>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(registration => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch(error => {
+      console.error('Service Worker registration failed:', error);
+    });
+  });
+}
+</script>
     <section1 id="latest-news">
         <div class="news-ticker">
             <marquee behavior="scroll" direction="left" scrollamount="5">
@@ -253,18 +266,5 @@
 <p>&copy; 2024 RJ Services. All rights reserved.</p>
 <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
     </footer>
-    <script>
-    if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-    .then(registration => {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-    .catch(error => {
-      console.error('Service Worker registration failed:', error);
-    });
-  });
-}
-</script>
 </body>
 </html>
