@@ -5,59 +5,98 @@
   "description": "Expert accounting and bookkeeping consultancy services.",
   "start_url": "/index.html",
   "scope": "/",
-  "display_override": ["window-controls-overlay", "standalone"],
-  "theme_color": "#000000",
+  "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#000000",
   "orientation": "portrait",
-  "window_controls_overlay": {
-    "enabled": true
-  },
-  "edge_side_panel": {
-    "enabled": true,
-    "preferred_width": 350
-  },
+  "dir": "ltr",
+  "lang": "en-US",
+  "iarc_rating_id": "12345-12345-12345-12345",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.example.app",
+      "id": "com.example.app"
+    }
+  ],
   "file_handlers": [
     {
-      "action": "/file-handler",
-      "accept": {
+      "action": "/handle-file",
+      "types": {
         "application/pdf": [".pdf"],
-        "image/png": [".png"]
+        "image/jpeg": [".jpg", ".jpeg"]
       }
     }
   ],
   "handle_links": {
     "url_patterns": ["*://yourwebsite.com/*"]
   },
-  "protocol_handlers": [
+  "share_target": {
+    "action": "/share.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "shortcuts": [
     {
-      "protocol": "web+example",
-      "url": "/handle/%s"
+      "name": "Open Dashboard",
+      "short_name": "Dashboard",
+      "description": "Go to your dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/dashboard.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Open Settings",
+      "short_name": "Settings",
+      "description": "Go to settings",
+      "url": "/settings",
+      "icons": [{ "src": "/icons/settings.png", "sizes": "192x192" }]
     }
   ],
   "widgets": [
     {
       "name": "Weather Widget",
+      "description": "Shows current weather",
       "url": "/widgets/weather"
     },
     {
-      "name": "Tasks Widget",
-      "url": "/widgets/tasks"
+      "name": "To-Do List",
+      "description": "Shows your tasks",
+      "url": "/widgets/todo"
     }
   ],
-  "launch_handler": {
-    "client_mode": "navigate-new",
-    "launch_type": "existing"
-  },
+  "screenshots": [
+    {
+      "src": "/screenshots/1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
   "background_sync": {
-    "sync_tag": "sync-updates"
+    "sync": "sync-events"
   },
-  "categories": ["business", "productivity", "utilities"],
   "periodic_sync": {
-    "min_interval": 86400
+    "min_interval": 86400,
+    "sync": "sync-events"
   },
   "push_notifications": {
     "enabled": true
   },
+  "scope_extensions": [
+    {
+      "origin": "https://relatedwebsite.com"
+    }
+  ],
   "icons": [
     {
       "src": "icon-192x192.png",
@@ -69,8 +108,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "iarc_rating_id": "your-iarc-rating-id",  // If applicable
-  "lang": "en",
-  "prefer_related_applications": false
+  ]
 }
