@@ -29,6 +29,10 @@
       }
     }
   ],
+  "launch_handler": {
+    "client_mode": "navigate-new",  // or "existing-client"
+    "launch_type": "existing"  // or "standalone" or "browser"
+  },
   "handle_links": {
     "url_patterns": ["*://yourwebsite.com/*"]
   },
