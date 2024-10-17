@@ -12,6 +12,34 @@
     "client_mode": "window",
     "url": "/index.html"
   },
+  "display_override": ["window-controls-overlay"],
+  "edge_side_panel": {
+    "enabled": true
+  },
+  "file_handlers": [
+    {
+      "action": "/handle-file",
+      "types": [
+        {
+          "kind": "file",
+          "mime": "application/pdf"
+        },
+        {
+          "kind": "file",
+          "mime": "image/jpeg"
+        }
+      ]
+    }
+  ],
+  "handle_links": {
+    "url_pattern": ["*://yourwebsite.com/*"]
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+yourprotocol",
+      "url": "/open-protocol?url=%s"
+    }
+  ],
   "icons": [
     {
       "src": "icon-192x192.png",
