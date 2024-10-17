@@ -8,7 +8,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
   "dir": "ltr",
   "lang": "en-US",
   "iarc_rating_id": "12345-12345-12345-12345",
@@ -109,16 +109,47 @@
       "origin": "https://relatedwebsite.com"
     }
   ],
-  "icons": [
+"icons": [
     {
-      "src": "icon-192x192.png",
-      "sizes": "192x192",
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "widgets": [
+    {
+      "name": "Accounting Services",
+      "src": "/widgets/accounting-services-widget.html",
+      "description": "Quick access to accounting services."
+    },
+    {
+      "name": "GST Services",
+      "src": "/widgets/gst-services-widget.html",
+      "description": "Quick access to GST services."
+    }
+  ],
+  "categories": [
+    "finance",
+    "business",
+    "consulting"
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "iarc_rating_id": "e",
+  "orientation": "any"
 }
