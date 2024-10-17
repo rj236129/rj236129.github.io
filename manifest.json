@@ -2,42 +2,99 @@
   "id": "https://rj236129.github.io/",
   "name": "RJ Services",
   "short_name": "RJ Services",
-  "description": "Expert accounting and bookkeeping consultancy services, including PAN card assistance and government job applications.",
+  "description": "Expert accounting and bookkeeping consultancy services.",
   "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait",
-  "launch_handler": {
-    "client_mode": "window",
-    "url": "/index.html"
-  },
-  "display_override": ["window-controls-overlay"],
-  "edge_side_panel": {
-    "enabled": true
-  },
+  "dir": "ltr",
+  "lang": "en-US",
+  "iarc_rating_id": "12345-12345-12345-12345",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.example.app",
+      "id": "com.example.app"
+    }
+  ],
   "file_handlers": [
     {
       "action": "/handle-file",
-      "types": [
-        {
-          "kind": "file",
-          "mime": "application/pdf"
-        },
-        {
-          "kind": "file",
-          "mime": "image/jpeg"
-        }
-      ]
+      "types": {
+        "application/pdf": [".pdf"],
+        "image/jpeg": [".jpg", ".jpeg"]
+      }
     }
   ],
   "handle_links": {
-    "url_pattern": ["*://yourwebsite.com/*"]
+    "url_patterns": ["*://yourwebsite.com/*"]
   },
-  "protocol_handlers": [
+  "share_target": {
+    "action": "/share.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "shortcuts": [
     {
-      "protocol": "web+yourprotocol",
-      "url": "/open-protocol?url=%s"
+      "name": "Open Dashboard",
+      "short_name": "Dashboard",
+      "description": "Go to your dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/dashboard.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Open Settings",
+      "short_name": "Settings",
+      "description": "Go to settings",
+      "url": "/settings",
+      "icons": [{ "src": "/icons/settings.png", "sizes": "192x192" }]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Weather Widget",
+      "description": "Shows current weather",
+      "url": "/widgets/weather"
+    },
+    {
+      "name": "To-Do List",
+      "description": "Shows your tasks",
+      "url": "/widgets/todo"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "background_sync": {
+    "sync": "sync-events"
+  },
+  "periodic_sync": {
+    "min_interval": 86400,
+    "sync": "sync-events"
+  },
+  "push_notifications": {
+    "enabled": true
+  },
+  "scope_extensions": [
+    {
+      "origin": "https://relatedwebsite.com"
     }
   ],
   "icons": [
