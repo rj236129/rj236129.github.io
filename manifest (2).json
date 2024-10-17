@@ -1,0 +1,18 @@
+{
+  "name": "RJ SERVICES",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "short_name": "RJ SERVICES",
+  "id": "RJ SERVICES",
+  "description": "accoutning and book keeping consultancy, emitra , etc. other services",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "fullscreen"
+  ],
+  "iarc_rating_id": "12345",
+  "prefer_related_applications": true,
+  "edge_side_panel": {
+    "preferred_width": 500
+  }
+}
