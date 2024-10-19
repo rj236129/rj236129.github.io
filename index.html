@@ -245,7 +245,14 @@
 <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
 
 <script>
-  // Firebase configuration object from your Firebase project settings
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
   authDomain: "meriappnotification.firebaseapp.com",
@@ -259,18 +266,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-  const messaging = firebase.messaging();
-
-  // Request permission to send notifications
-  messaging.requestPermission().then(function() {
-    return messaging.getToken();
-  }).then(function(token) {
-    console.log("FCM Token: ", token);
-    // Send this token to your server or use it to send notifications
-  }).catch(function(err) {
-    console.error("Permission denied", err);
-  });
 </script>
     <footer>
         <a href="https://wa.me/917737740207" style="background-color: green;font-size: 20px;color: white;" target="_blank">Chat with us on WhatsApp for help
