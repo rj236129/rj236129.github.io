@@ -8,7 +8,7 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
+    apiKey: "WMEcSO4LN0E_evO3SOyOdSkHblB0DY-DumwN2ebySGo",
     authDomain: "meriappnotification.firebaseapp.com",
     projectId: "meriappnotification",
     storageBucket: "meriappnotification.appspot.com",
