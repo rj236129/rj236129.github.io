@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Services - Home</title>
-    <link rel="manifest" href="/manifest.json">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color:black;
         }
 
         header {
-            background: #007BFF;
             color: white;
             padding: 5px 10px; /* Reduced padding for smaller header */
         }
@@ -44,7 +42,7 @@
         h3 {
             font-size: 15px;
             margin-top: 0;
-            color:black;
+            color:white;
             font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -100,37 +98,42 @@
 
         section {
             display: flex;
-            background: #f5f6f7;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .services {
-            flex: 2;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+          
         }
 
         .service {
-            background: white;
-            color: black;
-            margin: 10px;
-            border-radius: 5px;
-            flex: 1 1 ;
-            min-width: 200px;
+            color: #f1f1f1;
+            margin: 0 12px;
+            min-width: 50px;
+            width: 125px;
+            height: 150px;
             text-align: center;
             transition: background 0.3s ease;
-            border: 1px solid burlywood;  /* Add border to make it a box */
+            border: 5px solid burlywood;  /* Add border to make it a box */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            
         }
-
+       .service img {width: 100%;
+       height: auto;
+        object-fit: cover;
+        
+     }
         .service:hover {
-            background: burlywood;
+            background:  #ffe57f;
         }
 
         footer {
             text-align: center;
-            background: #007bbf;
+            background: #ffe57f;
             color: rgb(2, 2, 2);
             padding: 10px 0;
             width: 100%;
@@ -140,7 +143,7 @@
             margin: 5px 0;
         } 
         .back-btn {
-    background-color: #007BFF;
+    background-color:black;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -153,13 +156,31 @@
     background-color: burlywood;
 }
 .news-ticker {
-    background-color: #f1f1f1; /* Light gray background */
+    background-color: #ffe57f;
     padding: 0px;
     font-size: 20px;
     color: #921a1a; /* Dark text color */
     overflow: hidden;
     width:100%
 }
+.p {
+    display: flex;
+    justify-content: space-around; /* Words ke beech equal space dene ke liye */
+    margin: 0px 0px; /* Upar aur neeche margin */
+    flex-wrap: nowrap; /* Saare elements ko ek hi row me rakhne ke liye */
+    color: #f1f1f1; /* Text color */
+}
+
+.p p {
+    margin: 0 30px; /* Words ke beech horizontal space adjust karne ke liye */
+}
+.p span{margin-bottom: 2px;
+    display: flex;
+    flex-direction: column; /* Arrange letters in a column */
+    align-items: center; /* Center letters horizontally */
+   
+}
+.p a {color: white;}
 
     </style>
 </head>
@@ -180,14 +201,14 @@
     <section1 id="latest-news">
         <div class="news-ticker">
             <marquee behavior="scroll" direction="left" scrollamount="5">
-               <a href="https://www.freejubalert.com"><p>HOW ARE YOU</p></a>
+               <a href=""><p>New E-Mitra service for caste certificates available now!</p></a>
             </marquee>
         </div>
     </section1>
     
     <script>
     const newsItems = [
-        { text: "hello most welcome", date: "10th October 2024" },];
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
      const newsList = document.getElementById('news-list');
     newsItems.forEach(item => {
         const li = document.createElement('li');
@@ -199,97 +220,35 @@
 
     <section>
         <div class="services">
-            <h2 style="width: 100%;background-color:#007bbf;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
-            <div class="service">
-                <h3>ITR Services</h3>
-                <p>Expert assistance for income tax returns for individuals and businesses.</p>
-                <a href="itr.html">CLICK HERE</a>
+            <h2 style="width: 100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
+            <div style="background-color:white;" class="service"><img src="" alt=""> </div>
+            <div  class="service"><img src="" alt=""></div>
+            <div class="service"><img src="" alt=""></div>
+            <div style="padding-right: 15px;"class="service"><img src="" alt="">
+                
             </div>
             <div class="service">
-                <h3>GST Services</h3>
-                <p>Complete guidance for GST registration and compliance.</p>
-                <a href="gst.html">CLICK HERE</a>
+    
             </div>
             <div class="service">
-                <h3>Accounting Services</h3>
-                <p>Comprehensive accounting solutions tailored to your business.</p>
-                <a href="accounting.html">CLICK HERE</a>
+               
             </div>
             <div class="service">
-                <h3>Government Jobs</h3>
-                <p>Support for job applications, results tracking, and admit cards.</p>
-                <a href="jobs.html">CLICK HERE</a>
-            </div>
-            <div class="service">
-                <h3>PAN Card Services</h3>
-                <p>Assistance with new PAN applications and updates.</p>
-                <a href="pan_services.html">CLICK HERE</a>
-            </div>
-            <div class="service">
-                <h3>E-Mitra Services</h3>
-                <p>Access to various government services through E-Mitra.</p>
-                <a href="RJ SERVICES.HTML">CLICK HERE</a>
-            </div>
-            <div class="service">
-            <h3>Other Services</h3>
-            <p>Additional services offered by our consultancy.</p>
-            <a href="other_services.html">CLICK HERE</a>
+        
             </div>
         </div>
     </section>
-   <section> 
-    </section>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
-  import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging.js";
-
-  // Firebase configuration (Replace with your actual configuration values)
-  const firebaseConfig = {
-    apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
-    authDomain: "meriappnotification.firebaseapp.com",
-    projectId: "meriappnotification",
-    storageBucket: "meriappnotification.appspot.com",
-    messagingSenderId: "65356991475",
-    appId: "1:65356991475:web:42a3cde0e379992b6da086",
-    measurementId: "G-J5VF6VJYFH"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  // Initialize Firebase Cloud Messaging (FCM)
-  const messaging = getMessaging(app);
-
-  // Request permission for notifications
-  Notification.requestPermission().then((permission) => {
-    if (permission === 'granted') {
-      console.log('Notification permission granted.');
-
-      // Get the token (Replace with your actual VAPID key)
-      getToken(messaging, { vapidKey: 'BEd5M9zLVvBmvxYt8DX5lYj7ECNOQKTTuvVdpHpOAqTjcsjyT-Szz8JIlQwX5Pi' }).then((currentToken) => {
-        if (currentToken) {
-          console.log('FCM Token:', currentToken);
-          // Send token to your server and update the UI if necessary
-        } else {
-          console.log('No registration token available.');
-        }
-      }).catch((err) => {
-        console.log('An error occurred while retrieving token.', err);
-      });
-    } else {
-      console.log('Unable to get permission to notify.');
-    }
-  });
-
-  // Handle incoming messages
-  onMessage(messaging, (payload) => {
-    console.log('Message received. ', payload);
-    // Customize notification UI or take an action
-  });
-</script>
+        <section>
+            <div class="p"> 
+                <p><a href="ITR.html">ITR Services</a></p>   
+                <p><a href="gst.html">GST Services</a></p>
+                <p><a href="accounting.html">Accounting <span>Services</span></a></p>
+                <p><a href="JOBS.HTML">Government Jobs</a></p>
+                <p><a href="">PAN Card <span>Services</span></a></p>
+                <p><a href="RJ SERVICES.HTML">E-Mitra Services</a></p>
+                <p><a href="">Other <span> Services</a></span></p>
+            </div>
+       </section>
     <footer>
         <a href="https://wa.me/917737740207" style="background-color: green;font-size: 20px;color: white;" target="_blank">Chat with us on WhatsApp for help
         </a>
@@ -300,8 +259,8 @@
                 window.history.back();
             }
             </script></div>
-<p>&copy; 2024 RJ Services. All rights reserved.</p>
-<p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color: white;">ravijain236129@gmail.com</a></p>
+        <p>&copy; 2024 RJ Services. All rights reserved.</p>
+        <p>Contact: +91 7737740207 | Email: <a href="mailto:ravijain236129@gmail.com" style="color:black;">ravijain236129@gmail.com</a></p>
     </footer>
 </body>
 </html>
