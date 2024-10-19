@@ -246,17 +246,19 @@
 
 <script>
   // Firebase configuration object from your Firebase project settings
-  const firebaseConfig = {
-    apiKey: "your-api-key",
-    authDomain: "your-app-id.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project-id.appspot.com",
-    messagingSenderId: "your-messaging-sender-id",
-    appId: "your-app-id",
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
+  authDomain: "meriappnotification.firebaseapp.com",
+  projectId: "meriappnotification",
+  storageBucket: "meriappnotification.appspot.com",
+  messagingSenderId: "65356991475",
+  appId: "1:65356991475:web:42a3cde0e379992b6da086",
+  measurementId: "G-J5VF6VJYFH"
+};
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
   const messaging = firebase.messaging();
 
