@@ -144,6 +144,28 @@
         footer p {
             margin: 5px 0;
         } 
+        .whatsapp-button {
+            display: inline-block; 
+            margin-top: 10px; 
+            padding: 10px 15px; 
+            background-color: #25D366; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            vertical-align: middle;
+        }
+        .whatsapp-button:hover { 
+            background-color: #128C7E; 
+        }
+        .whatsapp-icon {
+            vertical-align: middle; 
+            margin-right: 8px; 
+        }
+
+
         .back-btn {
     background-color:black;
     color: white;
@@ -218,9 +240,13 @@ color: white;}
         </div>
     </section>
     <footer>
-        <a href="https://wa.me/917737740207" style="background-color: green;font-size: 20px;color: white;" target="_blank">Chat with us on WhatsApp for help
-        </a>
-        <div>
+         <div>
+            <a href="https://wa.me/917737740207" class="whatsapp-button" target="_blank">
+                <img src="WHATSAPP ICON.png" alt="WhatsApp" width="30" height="30" class="whatsapp-icon">
+                Chat with us on WhatsApp
+            </a>
+        </div>
+               <div>
         <img src="BACK .jpg"alt="back" style="width: 50px;height: 50px;" onclick="goBack()" class="back-btn">
         <script>
             function goBack() {
