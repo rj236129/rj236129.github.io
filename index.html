@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Services - Home</title>
-    <link rel="manifest" href="/manifest.json">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -110,10 +109,10 @@
 
         .service {
             color: #f1f1f1;
-            margin: 0 12px;
+            margin: 60px 12px;
             min-width: 50px;
             width: 125px;
-            height: 150px;
+            height: 120px;
             text-align: center;
             transition: background 0.3s ease;
             border: 5px solid burlywood;  /* Add border to make it a box */
@@ -121,6 +120,7 @@
             border-radius: 50%;
             align-items: center;
             justify-content: center;
+            margin-top: 10px;
             
         }
        .service img {width: 100%;
@@ -164,24 +164,9 @@
     overflow: hidden;
     width:100%
 }
-.p {
-    display: flex;
-    justify-content: space-around; /* Words ke beech equal space dene ke liye */
-    margin: 0px 0px; /* Upar aur neeche margin */
-    flex-wrap: nowrap; /* Saare elements ko ek hi row me rakhne ke liye */
-    color: #f1f1f1; /* Text color */
-}
-
-.p p {
-    margin: 0 30px; /* Words ke beech horizontal space adjust karne ke liye */
-}
-.p span{margin-bottom: 2px;
-    display: flex;
-    flex-direction: column; /* Arrange letters in a column */
-    align-items: center; /* Center letters horizontally */
-   
-}
-.p a {color: white;}
+.service a{display: grid;
+padding-top: 80%;
+color: white;}
 
     </style>
 </head>
@@ -221,35 +206,16 @@
 
     <section>
         <div class="services">
-            <h2 style="width: 100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid burlywood;">Our Services</h2>
-            <div style="background-color:white;" class="service"><img src="" alt=""> </div>
-            <div  class="service"><img src="" alt=""></div>
-            <div class="service"><img src="" alt=""></div>
-            <div style="padding-right: 15px;"class="service"><img src="" alt="">
-                
-            </div>
-            <div class="service">
-    
-            </div>
-            <div class="service">
-               
-            </div>
-            <div class="service">
-        
-            </div>
+            <div style="width: 100%;color: #ffe57f;font-style: italic; border: 1px solid burlywood;font-size: 20px;">Our Services</div>
+            <div class="service"><img src="" alt=""><p><a href="ITR.html">ITR Services</a></p></div>
+            <div  class="service"><img src="" alt=""><p><a href="gst.html">GST Services</a></p></div>
+            <div class="service"><img src="" alt=""><p><a href="accounting.html">Accounting <span>Services</span></a></p></div>
+            <div class="service"><img src="" alt=""><p><a href="JOBS.HTML">Government Jobs</a></p></div>
+            <div class="service"><img src="" alt=""><p><a href="">PAN Card <span>Services</span></a></p></div>
+            <div class="service"><img src="" alt=""><p><a href="RJ SERVICES.HTML">E-Mitra Services</a></p></div>
+            <div class="service"><img src="" alt=""><p><a href="">Other <span> Services</a></span></p></div>
         </div>
     </section>
-        <section>
-            <div class="p"> 
-                <p><a href="ITR.html">ITR Services</a></p>   
-                <p><a href="gst.html">GST Services</a></p>
-                <p><a href="accounting.html">Accounting <span>Services</span></a></p>
-                <p><a href="JOBS.HTML">Government Jobs</a></p>
-                <p><a href="">PAN Card <span>Services</span></a></p>
-                <p><a href="RJ SERVICES.HTML">E-Mitra Services</a></p>
-                <p><a href="">Other <span> Services</a></span></p>
-            </div>
-       </section>
     <footer>
         <a href="https://wa.me/917737740207" style="background-color: green;font-size: 20px;color: white;" target="_blank">Chat with us on WhatsApp for help
         </a>
