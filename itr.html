@@ -14,7 +14,7 @@
         }
         header { 
             text-align: center; 
-            margin-bottom: 20px; 
+            margin-bottom: 0%; 
             color: white; 
             padding: 15px; 
         }
@@ -29,12 +29,14 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
         }
         h4 { 
-            color: #333; 
-            background-color:#ffe57f ;
+            color: #ffe57f; 
             font-size: 20px;
             font-style: italic;
             padding-inline: 20px;
             text-decoration: underline;
+            padding: auto;
+            margin-top: 0px;
+        
         }
         p { 
             margin: 10px 0; 
@@ -92,6 +94,14 @@
             border-radius: 5px; 
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        .news-ticker {
+    background-color: #ffe57f;
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
+}
     </style>
 </head>
 <body> 
@@ -100,6 +110,24 @@
         <h2>JOIN US TO SAVE YOUR TIME</h2>
         <h2>WELCOME TO JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h2>
     </header>
+    <section1 id="latest-news">
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+               <a href=""><p>New E-Mitra service for caste certificates available now!</p></a>
+            </marquee>
+        </div>
+    </section1>
+    
+    <script>
+    const newsItems = [
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+     const newsList = document.getElementById('news-list');
+    newsItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.text} (Updated on: ${item.date})`;
+        newsList.appendChild(li);
+    });
+</script>
 
     <h4>ITR Services</h4>
     
@@ -118,7 +146,7 @@
     <footer>
         <div>
             <a href="https://wa.me/917737740207" class="whatsapp-button" target="_blank">
-                <img src="C:\Users\desktop\Desktop\WHATSAPP ICON.png" alt="WhatsApp" width="30" height="30" class="whatsapp-icon">
+                <img src="WHATSAPP ICON.png" alt="WhatsApp" width="30" height="30" class="whatsapp-icon">
                 Chat with us on WhatsApp
             </a>
         </div>
