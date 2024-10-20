@@ -9,9 +9,10 @@
             font-family: Arial, sans-serif; 
             padding: 20px; 
             margin: 0;
+            background-color: black;
         }
         h1, h2 { 
-            color: #333; 
+            color:white;
         }
         ul { 
             padding-left: 20px; 
@@ -21,12 +22,12 @@
         }
         p { 
             margin: 15px 0; 
+            color: white;
         }
 
         /* Header styling */
         header {
-            background-color: #007BFF;
-            color: white;
+            color:#ffe57f;
             padding: 15px 20px;
             text-align: center;
         }
@@ -36,12 +37,14 @@
 
         /* Footer styling */
         footer {
-            background-color: #007BFF;
+            background-color: #ffe57f;
             color: white;
             padding: 15px 20px;
             text-align: center;
             margin-top: 20px;
         }
+        footer p{color: black;
+        } 
 
         .whatsapp-button {
             background-color: #25D366; 
@@ -67,6 +70,14 @@
 .back-btn:hover {
     background-color: burlywood;
 }
+.news-ticker {
+    background-color: #ffe57f;
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
+}
     </style>
 </head>
 <body>
@@ -77,7 +88,24 @@
         <h2>JOIN US TO SAVE YOUR TIME</h2>
         <h3>WELCOME TO JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h3>
     </header>
-
+    <section1 id="latest-news">
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+               <a href="">New E-Mitra service for caste certificates available now!</a>
+            </marquee>
+        </div>
+    </section1>
+    
+    <script>
+    const newsItems = [
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+     const newsList = document.getElementById('news-list');
+    newsItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.text} (Updated on: ${item.date})`;
+        newsList.appendChild(li);
+    });
+</script>
     <!-- Main Content -->
     <h1>Accounting Services</h1>
 
