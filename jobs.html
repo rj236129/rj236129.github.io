@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Jobs | Results</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        header { text-align: center; 
-            background-color: #007BFF;
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color:black; }
+          header { text-align: center; 
             margin-bottom: 10px;
         padding: 20px 20px; }
-        h1 { color: #333; }
-        h2 { color: #4CAF50; }
+        h1 { color: white; }
+        h2 { color: #ffe57f; }
+        h3{color: white;}
         p, ol { margin: 10px 0; line-height: 1.5; }
         iframe { width: 100%; height: 600px; border: none; display: none; }
         footer { text-align: center; margin-top: 20px;
-            background-color: #007BFF;
+            background-color:#ffe57f ;
             padding: 40px 10px;}
         .whatsapp-button { display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #25D366; color: white; border-radius: 5px; text-decoration: none; }
          .back-btn {
@@ -30,6 +30,17 @@
 .back-btn:hover {
     background-color: burlywood;
 }  
+p{color: whitesmoke;}
+.news-ticker {
+    background-color: #ffe57f;
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
+}
+p1{color:#ffe57f;
+font-size: 30px;}
 </style>
 </head>
 <body>
@@ -45,10 +56,28 @@
     <h2>JOIN US TO SAVE YOUR TIME</h2>
     <h3>WELCOME TO JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h3>
 </header>
+<section1 id="latest-news">
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+           <a href=""><p2>New E-Mitra service for caste certificates available now!</p2></a>
+        </marquee>
+    </div>
+</section1>
+
+<script>
+const newsItems = [
+    { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+ const newsList = document.getElementById('news-list');
+newsItems.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.text} (Updated on: ${item.date})`;
+    newsList.appendChild(li);
+});
+</script>
 <script async src="https://cse.google.com/cse.js?cx=c6c520bc0202e4f36">
 </script>
 <div class="gcse-searchbox-only"></div>
-<h1>सरकारी नौकरियाँ | आवेदन, परिणाम और एडमिट कार्ड सेवाएँ</h1>
+<p1>सरकारी नौकरियाँ | आवेदन, परिणाम और एडमिट कार्ड सेवाएँ</p1>
 <p>जैन अकाउंटिंग और बुककीपिंग कंसल्टेंसी में, हम व्यक्तियों को सरकारी नौकरियों के लिए आवेदन करने, परिणाम ट्रैक करने और एडमिट कार्ड डाउनलोड करने में मदद करते हैं।</p>
 
 <h2>हम किस प्रकार की सरकारी नौकरियों को कवर करते हैं?</h2>
