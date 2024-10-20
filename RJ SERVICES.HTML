@@ -4,92 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Services - E-Mitra Services</title>
-<link rel="stylesheet" href="e-mitra.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color:black;
             margin: 0;
             padding: 0;
         }
 
         header {
             text-align: center;
-            background: #007BFF;
             color: white;
             padding: 20px 0;
         }
 
         h4 {
             text-align: center;
-            background: #007BFF;
             color: white;
             padding: 20px 10px;
             font-size: 30px;
+            margin-bottom: 0px;
+        }
+        .grid-container {
+            display: grid; /* Defines this as a grid container */
+            grid-template-columns: repeat(1, 2fr); /* 3 equal-width columns */
+            grid-gap: 10px; /* Space between the grid items */
+            padding: 5px;
         }
 
-        .quick-links {
-            margin-top: 10px;
-        }
-
-        .quick-links a {
-            margin: 0 15px;
-            text-decoration: none;
+        /* Grid Items */
+        .grid-item {
+            background-color: #ffe57f;
             color: white;
-            font-weight: bold; /* Make the text bold */
-            padding: 10px 15px; /* Add padding */
-            border-radius: 5px; /* Rounded corners */
-            background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-            transition: background 0.3s ease; /* Smooth background transition */
-        }
-
-        .quick-links a:hover {
-            background: rgba(255, 255, 255, 0.5); /* Lighter background on hover */
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .buttonList {
-            display: flex;
-            flex-direction: column;
-            margin-right: 20px; /* Spacing for vertical alignment */
-        }
-
-        .buttonList a {
-            text-decoration: none;
-            color: red;
-            text-align: left;
-            font-weight: bold; /* Make the text bold */
-            font-size: 12px; /* Increase font size */
-            margin-bottom: 0; /* Spacing between links */
-            text-decoration: underline;
-        }
-
-        .buttonList a:hover {
-            background: #0056b3;
-        }
-
-        .formLinks {
-            display: flex;
-            flex-direction: column;
-            
-        }
-
-        .formLinks a {
-            text-decoration: none;
-            color: red;
-            text-align: left;
-            font-weight: bold; /* Make the text bold */
-            font-size: 12px; /* Increase font size */
-            margin-bottom: 10px; /* Spacing between links */
-            padding-right: 10px;
-            text-decoration: underline;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
         }
         .whatsapp-button {
             display: flex;
@@ -97,7 +47,7 @@
             text-decoration: none;
             background: #25D366;
             color: white;
-            padding: 10px;
+            padding-inline: 550px;
             border-radius: 5px;
             transition: background 0.3s ease;
             margin-top: 20px;
@@ -111,35 +61,13 @@
             margin-right: 10px;
         }
 
-        .rj {
-            font-weight: bold;          /* Make the text bold */
-            font-size: 15px;           /* Change the font size */
-            color: #333;               /* Change text color */
-            text-align: center;        /* Center the text */
-            margin: 10px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
-            padding: 10px;             /* Add padding around the text */
-            border-radius: 5px;        /* Optional: Add rounded corners */
-        }
-
-        .form {
-            font-weight: bold;          /* Make the text bold */
-            font-size: 20px;           /* Change the font size */
-            color: #333;               /* Change text color */
-            text-align: center;        /* Center the text */
-            margin: 20px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
-            padding: 10px;             /* Add padding around the text */
-            border-radius: 5px;        /* Optional: Add rounded corners */
-        }
-
         .help {
             font-weight: bold;          /* Make the text bold */
             font-size: 20px;           /* Change the font size */
             color: #333;               /* Change text color */
             text-align: center;        /* Center the text */
             margin: 20px 0;           /* Add top and bottom margin */
-            background-color: #e0f7fa; /* Set background color behind the text */
+            background-color: #ffe57f; /* Set background color behind the text */
             padding: 10px;             /* Add padding around the text */
             border-radius: 5px;        /* Optional: Add rounded corners */
         }
@@ -150,7 +78,7 @@
             margin-top: 20px;
         }
         .back-btn {
-    background-color: burlywood;
+    background-color:#ffe57f;
     color: black;
     padding: 10px 20px;
     border: none;
@@ -162,33 +90,26 @@
 .back-btn:hover {
     background-color: burlywood;
 }
-.vertical-table {
-            width: 150px;
-            margin:20px ;
-            border: 2px solid black;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-        }
-
-        .vertical-table div {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 5px;
-            padding-right: 5px;
-        }
-
-        .vertical-table div span {
-            padding: 5px 0;
-            border-bottom: 1px solid #ddd;
-            font-weight: bold;
-        }
-
-        .vertical-table div span:last-child {
-            font-weight: normal;
-            border-bottom: none;
-        }
-
-    </style>
+p{font-size: 20px;
+color:white;
+font-weight: bold;
+text-align: center;
+margin-bottom:0px;
+margin-top: 5px;}
+.news-ticker {
+    background-color: #ffe57f;
+    padding: 0px;
+    font-size: 20px;
+    color: #921a1a; /* Dark text color */
+    overflow: hidden;
+    width:100%
+}
+h3{color: #ffe57f;
+}
+h4{color: #ffe57f;
+   margin-top: 0px;
+   margin-bottom: 0px;}
+</style>
 </head>
 <body> 
     <header> 
@@ -203,38 +124,54 @@
         <h3>WELCOME JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h3>
         <h4>E-MITRA SERVICES</h4>
     </header>
-    <section id="RJSERVICES">
-        <div style="display: flex;">
-            <div class="vertical-table">
-                <div><p class="rj">ONLY FOR BIJOLIYA BLOCK</p></div>
-                <div><b style="text-align: center;text-decoration: underline;">click for detaile</b></div>
-                <div class="buttonList"><a href="https://janapp.rajasthan.gov.in/janaadhaar/citizenDashboard">JAN-AADHAR</a></div>
-                <div class="buttonList"><a href="ration-card.html">RATION-CARD</a></div>
-                <div class="buttonList"><a href="nfsa.html">NFSA (राशन पाने के लिये)</a></div>
-                <div class="buttonList"><a href="cast cetificate.html">CAST CERTIFICATE (जाति प्रमाण पत्र)</a></div>
-                <div class="buttonList"><a href="bonafide certificate.html">BONAFIDE CERTIFICATE(मूल-निवास प्रमाण पात्र)</a></div>
-                <div class="buttonList"><a href="birth certificate.html">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</a></div>
-                <div class="buttonList"><a href="death certificate.html">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</a></div>
-                </div>
-
-            <div class="vertical-table">
-                <h3 class="form">All E-Mitra Application Forms:</h3>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1aGUGRbbcTQrpwkl7CPj0MiEXYid2iz4J/view?usp=drive_link" target="_blank">1.:-JAN-AADHAR CARD APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1VAR4-25aEipsp0WdF2lShEsqN2cRoae2/view?usp=drive_link" target="_blank">2:-NEW RATION-CARD APPLICATION FORM FOR APL</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1t1X1eayB8X1yu9gP6ymzJrMwD9TVaCHc/view?usp=drive_link" target="_blank">3:-NEW RATION-CARD APPLICATION FORM FOR BPL</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/179j8NoBr7AUq7EOs1n35z06Gt3acLwtK/view?usp=drive_link" target="_blank">4:-RATION CARD CORRECTION APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1hSjoQgcea3xON42AFEhAJPJ5_407Fa30/view?usp=drive_link" target="_blank">5:-NFSA APPLICATION FORM FOR RULAR</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1cmUrORLB8ZzED2Bo1stlx0_hFKknIPPu/view?usp=drive_link" target="_blank">6:-OBC CAST CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1brNEz51RCdhrBFiymriFElGIPjpT_a8A/view?usp=sharing" target="_blank">7:-CAST CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1A8Sd3J4kWd6DE00RdaG465dIs05XSOgV/view?usp=drive_link" target="_blank">8:-ST/SC CAST CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/14lKNvRai0OcDHA62fcHgOVyZyTn9IVPf/view?usp=drive_link" target="_blank">9:-BONAFIDE CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1CtQdCYNv_Fdd-AroahuU_9IKgXf-tEWa/view?usp=drive_link" target="_blank">10:-BIRTH CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1A9IpAgzRqqyU769suqRYlwgTEX6ElYGM/view?usp=drive_link" target="_blank">11:-DEATH CERTIFICATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1hlGHEJP97bT9LQ5zAKfRTjMqkehlp2lK/view?usp=drive_link" target="_blank">12:-Vivah Panjian APPLICATION FORM</a>  </div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/12SpIhgmsPgTjHlHqga61FiLii7zhtxJY/view?usp=drive_link" target="_blank">13:-EWS STATE APPLICATION FORM</a></div>
-                <div class="buttonList"><a href="https://drive.google.com/file/d/1btQORO5TGPiWMMmtKfHmDiOXmGzo8M71/view?usp=drive_link" target="_blank">14:-EWS CENTER GOVT. APPLICATION FORM</a></div>
-</div>
+    <section1 id="latest-news">
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+               <a href=""><p2>New E-Mitra service for caste certificates available now!</p2></a>
+            </marquee>
         </div>
+    </section1>
+    
+    <script>
+    const newsItems = [
+        { text: "New E-Mitra service for caste certificates available now!", date: "10th October 2024" },];
+     const newsList = document.getElementById('news-list');
+    newsItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.text} (Updated on: ${item.date})`;
+        newsList.appendChild(li);
+    });
+    </script>
+    <section>  
+        <p>ONLY FOR BIJOLIYA BLOCK</p>   
+        <div class="grid-container">       
+                <div class="grid-item">
+                <div class="grid-item"><a href="https://janapp.rajasthan.gov.in/janaadhaar/citizenDashboard">JAN-AADHAR</a></div>
+                <div class="grid-item"><a href="ration-card.html">RATION-CARD</a></div>
+                <div class="grid-item"><a href="nfsa.html">NFSA (राशन पाने के लिये)</a></div>
+                <div class="grid-item"><a href="cast cetificate.html">CAST CERTIFICATE (जाति प्रमाण पत्र)</a></div>
+                <div class="grid-item"><a href="bonafide certificate.html">BONAFIDE CERTIFICATE(मूल-निवास प्रमाण पात्र)</a></div>
+                <div class="grid-item"><a href="birth certificate.html">BIRTH CERTIFICATE (जन्म प्रमाण पत्र)</a></div>
+                <div class="grid-item"><a href="death certificate.html">DEATH CERTIFICATE (मृत्यु प्रमाण पत्र)</a></div>
+                </div>
+                <p>SERVICES APPLICATION FORM</p>
+            <div class="grid-container">
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1aGUGRbbcTQrpwkl7CPj0MiEXYid2iz4J/view?usp=drive_link" target="_blank">1.:-JAN-AADHAR CARD APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1VAR4-25aEipsp0WdF2lShEsqN2cRoae2/view?usp=drive_link" target="_blank">2:-NEW RATION-CARD APPLICATION FORM FOR APL</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1t1X1eayB8X1yu9gP6ymzJrMwD9TVaCHc/view?usp=drive_link" target="_blank">3:-NEW RATION-CARD APPLICATION FORM FOR BPL</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/179j8NoBr7AUq7EOs1n35z06Gt3acLwtK/view?usp=drive_link" target="_blank">4:-RATION CARD CORRECTION APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1hSjoQgcea3xON42AFEhAJPJ5_407Fa30/view?usp=drive_link" target="_blank">5:-NFSA APPLICATION FORM FOR RULAR</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1cmUrORLB8ZzED2Bo1stlx0_hFKknIPPu/view?usp=drive_link" target="_blank">6:-OBC CAST CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1brNEz51RCdhrBFiymriFElGIPjpT_a8A/view?usp=sharing" target="_blank">7:-CAST CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1A8Sd3J4kWd6DE00RdaG465dIs05XSOgV/view?usp=drive_link" target="_blank">8:-ST/SC CAST CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/14lKNvRai0OcDHA62fcHgOVyZyTn9IVPf/view?usp=drive_link" target="_blank">9:-BONAFIDE CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1CtQdCYNv_Fdd-AroahuU_9IKgXf-tEWa/view?usp=drive_link" target="_blank">10:-BIRTH CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1A9IpAgzRqqyU769suqRYlwgTEX6ElYGM/view?usp=drive_link" target="_blank">11:-DEATH CERTIFICATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1hlGHEJP97bT9LQ5zAKfRTjMqkehlp2lK/view?usp=drive_link" target="_blank">12:-Vivah Panjian APPLICATION FORM</a>  </div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/12SpIhgmsPgTjHlHqga61FiLii7zhtxJY/view?usp=drive_link" target="_blank">13:-EWS STATE APPLICATION FORM</a></div>
+                <div class="grid-item"><a href="https://drive.google.com/file/d/1btQORO5TGPiWMMmtKfHmDiOXmGzo8M71/view?usp=drive_link" target="_blank">14:-EWS CENTER GOVT. APPLICATION FORM</a></div>
+            </div>
+        </section>
         <h3 class="help">Need Help?</h3>
         <div class="whatsapp-button">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
@@ -242,4 +179,4 @@
         </div>
     </section>
 </body>
-</html>
+</html> 
