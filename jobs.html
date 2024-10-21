@@ -14,22 +14,29 @@
         h3{color: white;}
         p, ol { margin: 10px 0; line-height: 1.5; }
         iframe { width: 100%; height: 600px; border: none; display: none; }
-        footer { text-align: center; margin-top: 20px;
-            background-color:#ffe57f ;
-            padding: 40px 10px;}
-        .whatsapp-button { display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #25D366; color: white; border-radius: 5px; text-decoration: none; }
-         .back-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 0;
-}
-.back-btn:hover {
-    background-color: burlywood;
-}  
+        footer {
+            background-color: #ffe57f;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p{color: black;
+        } 
+
+        .whatsapp-button {
+            background-color: #25D366; 
+            color: white; 
+            padding: 10px; 
+            text-decoration: none;
+            border-radius: 5px; 
+            display: inline-block;
+        }
+
+        .whatsapp-button img {
+            vertical-align: middle; 
+            margin-right: 8px;
+        }
 p{color: whitesmoke;}
 .news-ticker {
     background-color: #ffe57f;
@@ -46,12 +53,6 @@ font-size: 30px;}
 <body>
 
 <header>
-    <img src="BACK .jpg"alt="back" style="width: 50px;height: 50px;" onclick="goBack()" class="back-btn">
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-            </script>
     <h1>RJ SERVICES</h1> 
     <h2>JOIN US TO SAVE YOUR TIME</h2>
     <h3>WELCOME TO JAIN ACCOUNTING & BOOK-KEEPING CONSULTANCY</h3>
@@ -107,10 +108,12 @@ newsItems.forEach(item => {
 <p>सरकारी नौकरी सुरक्षित करने के अवसर को न चूकें। हमें आपकी सहायता करने दें।</p>
 
 <p>फोन: +91 7737740207<br>ईमेल: <a href="mailto:ravijain236129@gmail.com">ravijain236129@gmail.com</a><br>स्थान: बिजोलीया, भीलवाड़ा (राजस्थान), 311602</p>
-<footer>
-    
-    <a href="https://wa.me/917737740207" class="whatsapp-button" target="_blank">Chat with us on WhatsApp</a>
+<footer><a href="https://wa.me/917737740207" class="whatsapp-button" target="_blank">
+    <img src="WHATSAPP ICON.png" alt="WhatsApp" width="20" height="20">
+    Chat with us on WhatsApp
+</a>
+<p>Phone: +91 7737740207</p>
+<p>Email: ravijain236129@gmail.com</p>
 </footer>
-
 </body>
 </html>
