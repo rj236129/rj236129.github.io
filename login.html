@@ -4,31 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-</head>
-<body>
-    <h2>Login to Your Account</h2>
-
-    <!-- Sign-up Form -->
-    <form id="signupForm">
-        <input type="email" id="signupEmail" placeholder="Email" required>
-        <input type="password" id="signupPassword" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <!-- Login Form -->
-    <form id="loginForm">
-        <input type="email" id="loginEmail" placeholder="Email" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-
-    <!-- Google Sign-In -->
-    <button id="googleLoginButton">Login with Google</button>
-
+    <!-- Firebase App (the core Firebase SDK) -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
-    <script src="firebase-config.js"></script>
-    <script src="login.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <button id="googleLogin">Login with Google</button>
+    </div>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
+            authDomain: "meriappnotification.firebaseapp.com",
+            projectId: "meriappnotification",
+            storageBucket: "meriappnotification.appspot.com",
+            messagingSenderId: "65356991475",
+            appId: "1:65356991475:web:42a3cde0e379992b6da086",
+            measurementId: "G-J5VF6VJYFH"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Google Login
+        const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+        document.getElementById('googleLogin').addEventListener('click', () => {
+            auth.signInWithPopup(googleProvider)
+            .then((result) => {
+                // Successful login
+                console.log('User logged in:', result.user);
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            })
+            .catch((error) => {
+                console.error('Login error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
