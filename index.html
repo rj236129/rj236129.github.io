@@ -8,7 +8,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
@@ -18,7 +18,7 @@
 
     <div id="content">
         <h1>Welcome to My Website</h1>
-        <!-- Content here -->
+        <!-- Main Content -->
     </div>
 
     <script>
@@ -35,14 +35,10 @@
 
         // Initialize Firebase
         const app = firebase.initializeApp(firebaseConfig);
-
-        // Initialize Firebase Authentication and get a reference to the service
         const auth = firebase.auth();
-
-        // Firestore (if needed for user data)
         const db = firebase.firestore();
 
-        // When login button is clicked, redirect to login.html
+        // Redirect to login page when login button is clicked
         document.getElementById('loginButton').addEventListener('click', () => {
             window.location.href = 'login.html';
         });
