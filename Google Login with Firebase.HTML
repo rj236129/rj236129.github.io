@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login with Firebase</title>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+  <h2>Login with Google</h2>
+  <button onclick="signInWithGoogle()">Sign in with Google</button>
+
+  <div id="user-info" style="margin-top: 20px;"></div>
+
+  <script>
+    // Firebase project configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCbLnj8H_BhbwGuFrJR_MUMYSOUmEaYvww",
+      authDomain: "rjapp-6fc09.firebaseapp.com",
+      projectId: "rjapp-6fc09",
+      storageBucket: "rjapp-6fc09.appspot.com",
+      messagingSenderId: "1047396234166",
+      appId: "1:1047396234166:android:4af3d994da76a623a68717"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Google Sign-In Function
+    function signInWithGoogle() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          // Display user information
+          document.getElementById("user-info").innerHTML = `
+            <h3>Welcome, ${user.displayName}</h3>
+            <p>Email: ${user.email}</p>
+            <img src="${user.photoURL}" alt="Profile Picture" style="width:100px;height:100px;" />
+          `;
+        })
+        .catch((error) => {
+          console.error("Error during login:", error);
+          alert("Error during login: " + error.message);
+        });
+    }
+  </script>
+</body>
+</html>
