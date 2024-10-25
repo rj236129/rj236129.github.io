@@ -1,167 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Signup</title>
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 0px #000;
-            border-radius: 10px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .google-btn {
-            background-color: #4285F4;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .link {
-            color: #4285F4;
-            text-decoration: none;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login on GitHub Pages</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    function handleCredentialResponse(response) {
+      console.log("Encoded JWT ID token: " + response.credential);
+      // Optional: Decode JWT to retrieve user profile data
+      const userObject = JSON.parse(atob(response.credential.split('.')[1]));
+      document.getElementById("user-info").innerHTML = `
+        <h3>Welcome, ${userObject.name}</h3>
+        <p>Email: ${userObject.email}</p>
+        <img src="${userObject.picture}" alt="Profile Picture" />
+      `;
+    }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <input type="email" id="login-email" placeholder="Email" required />
-        <input type="password" id="login-password" placeholder="Password" required />
-        <button onclick="login()">Login</button>
-        <button class="google-btn" onclick="googleSignIn()">Sign in with Google</button>
-        <p>Don't have an account? <a href="#" class="link" onclick="showSignUp()">Sign up</a></p>
-    </div>
+  <h2>Login with Google</h2>
 
-    <div class="container" id="signup-container" style="display:none;">
-        <h2>Sign Up</h2>
-        <input type="email" id="signup-email" placeholder="Email" required />
-        <input type="password" id="signup-password" placeholder="Password" required />
-        <button onclick="signUp()">Sign Up</button>
-        <p>Already have an account? <a href="#" class="link" onclick="showLogin()">Login</a></p>
-    </div>
+  <div id="g_id_onload"
+       data-client_id="YOUR_GOOGLE_CLIENT_ID"
+       data-callback="handleCredentialResponse"
+       data-context="signin"
+       data-ux_mode="popup"
+       data-auto_prompt="false">
+  </div>
 
-    <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDrgBPLAkNooS4jjYrsrGVORVUsC3RFM2Q",
-            authDomain: "meriappnotification.firebaseapp.com",
-            projectId: "meriappnotification",
-            storageBucket: "meriappnotification.appspot.com",
-            messagingSenderId: "65356991475",
-            appId: "1:65356991475:web:42a3cde0e379992b6da086",
-            measurementId: "G-J5VF6VJYFH"
-        };
+  <div class="g_id_signin" data-type="standard"></div>
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        // Show SignUp form
-        function showSignUp() {
-            document.querySelector('.container').style.display = 'none';
-            document.getElementById('signup-container').style.display = 'block';
-        }
-
-        // Show Login form
-        function showLogin() {
-            document.querySelector('.container').style.display = 'block';
-            document.getElementById('signup-container').style.display = 'none';
-        }
-
-        // Sign up function
-        function signUp() {
-            const email = document.getElementById("signup-email").value;
-            const password = document.getElementById("signup-password").value;
-
-            auth.createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    alert("Signup successful");
-                    const user = userCredential.user;
-                    console.log(user);
-                })
-                .catch((error) => {
-                    console.error(error);
-                    alert(error.message);
-                });
-        }
-
-        // Login function
-        function login() {
-            const email = document.getElementById("login-email").value;
-            const password = document.getElementById("login-password").value;
-
-            auth.signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    alert("Login successful");
-                    const user = userCredential.user;
-                    console.log(user);
-                })
-                .catch((error) => {
-                    console.error(error);
-                    alert(error.message);
-                });
-        }
-
-        // Google sign-in function
-        function googleSignIn() {
-            const provider = new firebase.auth.GoogleAuthProvider();
-
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    alert("Google sign-in successful");
-                    console.log(user);
-                })
-                .catch((error) => {
-                    console.error(error);
-                    alert(error.message);
-                });
-        }
-    </script>
+  <div id="user-info"></div>
+    
 </body>
 </html>
