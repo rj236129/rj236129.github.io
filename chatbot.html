@@ -1,103 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RJ Excel AI ChatBot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
+      margin: 40px;
+      background: #f4f4f4;
+      color: #333;
     }
-    .chat-container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
-    .chat-header {
-      background-color: #00796b;
-      color: white;
-      padding: 15px;
+    h2 {
       text-align: center;
-      font-size: 20px;
     }
-    .chat-box {
-      flex: 1;
+    #chatbox {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      height: 400px;
       overflow-y: auto;
-      padding: 15px;
-      background-color: white;
+      border: 1px solid #ccc;
     }
-    .chat-message {
+    .message {
       margin: 10px 0;
     }
-    .user-message {
-      text-align: right;
-      color: blue;
+    .user { text-align: right; color: #0066cc; }
+    .ai { text-align: left; color: #444; }
+    #inputArea {
+      text-align: center;
+      margin-top: 20px;
     }
-    .bot-message {
-      text-align: left;
-      color: green;
-    }
-    .chat-input {
-      display: flex;
-      background-color: #ddd;
-      padding: 10px;
-    }
-    .chat-input input {
-      flex: 1;
+    input[type="text"] {
+      width: 70%;
       padding: 10px;
       font-size: 16px;
     }
-    .chat-input button {
-      padding: 10px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      cursor: pointer;
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="chat-container">
-    <div class="chat-header">RJ Excel AI ChatBot</div>
-    <div class="chat-box" id="chatBox"></div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Type your message...">
-      <button onclick="sendMessage()">Send</button>
-    </div>
+  <h2>🤖 RJ Excel AI ChatBot</h2>
+  <div id="chatbox"></div>
+  <div id="inputArea">
+    <input type="text" id="userInput" placeholder="Type your message here..." />
+    <button onclick="sendMessage()">Send</button>
   </div>
 
   <script>
+    const API_URL = "https://62fb61d0-0c4d-4ff3-9aca-a00475724769-00-tmi7p0j091ay.riker.replit.dev/chat";
+
+    function appendMessage(sender, text) {
+      const div = document.createElement("div");
+      div.classList.add("message", sender);
+      div.innerText = `${sender === "user" ? "You" : "AI"}: ${text}`;
+      document.getElementById("chatbox").appendChild(div);
+      document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+    }
+
     async function sendMessage() {
       const input = document.getElementById("userInput");
       const message = input.value.trim();
       if (!message) return;
 
-      displayMessage(message, "user");
+      appendMessage("user", message);
       input.value = "";
 
       try {
-        const response = await fetch("http://localhost:5000/chat", {
+        const res = await fetch(API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message })
         });
-
-        const data = await response.json();
-        displayMessage(data.reply, "bot");
+        const data = await res.json();
+        appendMessage("ai", data.reply || data.error || "No response");
       } catch (err) {
-        displayMessage("Server Error: " + err.message, "bot");
+        appendMessage("ai", "Error: " + err.message);
       }
-    }
-
-    function displayMessage(text, sender) {
-      const box = document.getElementById("chatBox");
-      const msg = document.createElement("div");
-      msg.className = "chat-message " + (sender === "user" ? "user-message" : "bot-message");
-      msg.innerText = text;
-      box.appendChild(msg);
-      box.scrollTop = box.scrollHeight;
     }
   </script>
 </body>
